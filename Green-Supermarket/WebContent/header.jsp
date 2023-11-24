@@ -1,6 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1" %>
-<%@ page import="com.shashi.service.impl.*, com.shashi.service.*" %>
+<%@ page import="com.green.service.impl.*, com.green.service.*" %>
+<%@ page import="jakarta.servlet.http.HttpSession" %>
+<%@ page import="java.text.DecimalFormat" %>
+
+
 
 <!DOCTYPE html>
 <html>
@@ -347,7 +351,7 @@
 	<!--Company Header Starting  -->
 	
 	<!-- Company Header Ending -->
-
+	
 	<%
 	/* Checking the user credentials */
 	String userType = (String) session.getAttribute("usertype");
@@ -362,7 +366,7 @@
     <div class="hamburger-menu-links">
         <a href="#">Home</a>
         <a href="#">Best Deals</a>
-        <a href="#">About Us</a>
+        <a href="team.jsp">About Us</a>
         <a href="#">Contact Us</a>
         <div class="dropdown">
         <div class="dropdown-toggle" id="categories-dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
@@ -370,11 +374,11 @@
             &nbsp;Categories
         </div>
         <div class="dropdown-menu" aria-labelledby="categories-dropdown-toggle">
-            <a class="dropdown-item" href="#">Organic Vegetables</a>
-            <a class="dropdown-item" href="#">Organic Fruits</a>
+            <a class="dropdown-item" href="#">Organic Vegetables </a>
+            <a class="dropdown-item" href="organicfruits.jsp">Organic Fruits</a>
             <a class="dropdown-item" href="#">Grocery Items</a>
             <a class="dropdown-item" href="#">Bakery Items</a>
-            <a class="dropdown-item" href="#">Biscuits & Snacks</a>
+            <a class="dropdown-item" href="SnacksandBiscuits.jsp">Biscuits & Snacks</a>
             <a class="dropdown-item" href="#">Beverages & Juices</a>
             <a class="dropdown-item" href="#">Beauty & Healthcare</a>
         </div>
@@ -399,7 +403,12 @@
             <a href="#" class="cart-icon">
               <i class="fas fa-shopping-cart"></i>
               
-              <span class="cart-total">Rs.0.00</span> 
+
+              <span class="cart-total"></span> 
+
+              <span class="cart-total">Rs:</span> 
+
+
           </a>
         </div>
     </div>
@@ -412,11 +421,11 @@
             &nbsp;Categories
         </div>
         <div class="dropdown-menu" aria-labelledby="categories-dropdown-toggle">
-            <a class="dropdown-item" href="#">Organic Vegetables</a>
-            <a class="dropdown-item" href="#">Organic Fruits</a>
+            <a class="dropdown-item" href="organicvege.jsp">Organic Vegetables</a>
+            <a class="dropdown-item" href="organicfruits.jsp">Organic Fruits</a>
             <a class="dropdown-item" href="#">Grocery Items</a>
             <a class="dropdown-item" href="#">Bakery Items</a>
-            <a class="dropdown-item" href="#">Biscuits & Snacks</a>
+            <a class="dropdown-item" href="SnacksandBiscuits.jsp">Biscuits & Snacks</a>
             <a class="dropdown-item" href="#">Beverages & Juices</a>
             <a class="dropdown-item" href="#">Beauty & Healthcare</a>
         </div>
@@ -426,9 +435,9 @@
         <div class="navlinks23">
         <a href="index.jsp" class="nav-link2">Home</a>
         <a href="#" class="nav-link2">Best Deals</a>
-        <a href="#" class="nav-link2">Track Orders</a>
+        <a href="cartDetails.jsp" class="nav-link2">Track Orders</a>
         <a href="#" class="nav-link2">Contact Us</a>
-        <a href="#" class="nav-link2">About Us</a>
+        <a href="team.jsp" class="nav-link2">About Us</a>
         </div>
     </div>
     </div>
@@ -439,61 +448,92 @@
 	int notf = new CartServiceImpl().getCartCount((String) session.getAttribute("username"));
 	%>
 	<div class="mainnav">
-	<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="hamburger-menu">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="hamburger-menu-links">
+        <a href="#">Home</a>
+        <a href="#">Best Deals</a>
+        <a href="#">About Us</a>
+        <a href="team.jsp">Contact Us</a>
+        <div class="dropdown">
+        <div class="dropdown-toggle" id="categories-dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            &nbsp;Categories
+        </div>
+        <div class="dropdown-menu" aria-labelledby="categories-dropdown-toggle">
+            <a class="dropdown-item" href="organicvege.jsp">Organic Vegetables </a>
+            <a class="dropdown-item" href="organicfruits.jsp">Organic Fruits</a>
+            <a class="dropdown-item" href="#">Grocery Items</a>
+            <a class="dropdown-item" href="#">Bakery Items</a>
+            <a class="dropdown-item" href="SnacksandBiscuits.jsp">Biscuits & Snacks</a>
+            <a class="dropdown-item" href="#">Beverages & Juices</a>
+            <a class="dropdown-item" href="#">Beauty & Healthcare</a>
+        </div>
+    </div>
+        <a href="#">Signup</a>
+        <a href="#">Logout</a>
+    </div>
+	<div class="top-navbar">
 
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse"
-					data-target="#myNavbar">
-					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="userHome.jsp"><span
-					class="glyphicon glyphicon-home">&nbsp;</span>Shopping Center</a>
-			</div>
+        <div>
+            <img src="images/logo.png" alt="Logo" class="logo">
+        </div>
+        <form class="form-inline" action="index.jsp" method="get">
+        <div class="search-bar-container">
+            <i class="fa fa-search search-icon" font-size="15px" style="margin-left:5px;"></i>
+            <input type="text" class="search-bar" placeholder="Search...">
+        </div>
+        </form>
+        <div class="top-navbar-right">
+            <a href="register.jsp">Signup</a>
+            <a href="login.jsp">Logout</a>
+            <a href="#" class="cart-icon">
+              <i class="fas fa-shopping-cart"></i>
+              
 
-			<div class="collapse navbar-collapse" id="myNavbar">
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="userHome.jsp"><span
-							class="glyphicon glyphicon-home">Products</span></a></li>
-					<li class="dropdown"><a class="dropdown-toggle"
-						data-toggle="dropdown" href="#">Category <span class="caret"></span>
-					</a>
-						<ul class="dropdown-menu">
-							<li><a href="userHome.jsp?type=mobile">Mobiles</a></li>
-							<li><a href="userHome.jsp?type=tv">TV</a></li>
-							<li><a href="userHome.jsp?type=laptop">Laptops</a></li>
-							<li><a href="userHome.jsp?type=camera">Camera</a></li>
-							<li><a href="userHome.jsp?type=speaker">Speakers</a></li>
-							<li><a href="userHome.jsp?type=tablet">Tablets</a></li>
-						</ul></li>
-					<%
-					if (notf == 0) {
-					%>
-					<li><a href="cartDetails.jsp"> <span
-							class="glyphicon glyphicon-shopping-cart"></span>Cart
-					</a></li>
+             <span class="cart-total"></span> 
 
-					<%
-					} else {
-					%>
-					<li><a href="cartDetails.jsp"
-						style="margin: 0px; padding: 0px;" id="mycart"><i
-							data-count="<%=notf%>"
-							class="fa fa-shopping-cart fa-3x icon-white badge"
-							style="background-color: #333; margin: 0px; padding: 0px; padding-bottom: 0px; padding-top: 5px;">
-						</i></a></li>
-					<%
-					}
-					%>
-					<li><a href="orderDetails.jsp">Orders</a></li>
-					<li><a href="userProfile.jsp">Profile</a></li>
-					<li><a href="./LogoutSrv">Logout</a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-	</div>
+             <span class="cart-total">Rs:</span> 
+
+
+          </a>
+        </div>
+    </div>
+
+	<!-- Starting Navigation Bar -->
+	<div class="second-navbar2">
+        <div class="dropdown">
+        <div class="dropdown-toggle" id="categories-dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            &nbsp;Categories
+        </div>
+        <div class="dropdown-menu" aria-labelledby="categories-dropdown-toggle">
+            <a class="dropdown-item" href="organicvege.jsp">Organic Vegetables</a>
+            <a class="dropdown-item" href="organicfruits.jsp">Organic Fruits</a>
+            <a class="dropdown-item" href="#">Grocery Items</a>
+            <a class="dropdown-item" href="#">Bakery Items</a>
+            <a class="dropdown-item" href="#">Biscuits & Snacks</a>
+            <a class="dropdown-item" href="SnacksandBiscuits.jsp">Beverages & Juices</a>
+            <a class="dropdown-item" href="#">Beauty & Healthcare</a>
+        </div>
+    </div>
+
+        
+        <div class="navlinks23">
+        <a href="index.jsp" class="nav-link2">Home</a>
+        <a href="#" class="nav-link2">Best Deals</a>
+        <a href="cartDetails.jsp" class="nav-link2">Track Orders</a>
+        <a href="#" class="nav-link2">Contact Us</a>
+        <a href="team.jsp" class="nav-link2">About Us</a>
+        </div>
+    </div>
+    </div>
+    </div>
+					
+					
 	<%
 	} else { //ADMIN HEADER
 	%>
@@ -517,11 +557,11 @@
             <i class="fa fa-chevron-circle-down" font-size="15"></i>&nbsp;Categories
         </div>
         <div class="dropdown-menu" aria-labelledby="categories-dropdown-toggle">
-            <a class="dropdown-item" href="#">Organic Vegetables</a>
-            <a class="dropdown-item" href="#">Organic Fruits</a>
+            <a class="dropdown-item" href="organicvege.jsp">Organic Vegetables</a>
+            <a class="dropdown-item" href="organicfruits.jsp">Organic Fruits</a>
             <a class="dropdown-item" href="#">Grocery Items</a>
             <a class="dropdown-item" href="#">Bakery Items</a>
-            <a class="dropdown-item" href="#">Biscuits & Snacks</a>
+            <a class="dropdown-item" href="SnacksandBiscuits.jsp">Biscuits & Snacks</a>
             <a class="dropdown-item" href="#">Beverages & Juices</a>
             <a class="dropdown-item" href="#">Beauty & Healthcare</a>
         </div>
@@ -556,11 +596,11 @@
             <i class="fa fa-chevron-circle-down" font-size="15"></i>&nbsp;Categories
         </div>
         <div class="dropdown-menu" aria-labelledby="categories-dropdown-toggle">
-            <a class="dropdown-item" href="#">Organic Vegetables</a>
-            <a class="dropdown-item" href="#">Organic Fruits</a>
+            <a class="dropdown-item" href="organicvege.jsp">Organic Vegetables</a>
+            <a class="dropdown-item" href="organicfruits.jsp">Organic Fruits</a>
             <a class="dropdown-item" href="#">Grocery Items</a>
             <a class="dropdown-item" href="#">Bakery Items</a>
-            <a class="dropdown-item" href="#">Biscuits & Snacks</a>
+            <a class="dropdown-item" href="SnacksandBiscuits.jsp">Biscuits & Snacks</a>
             <a class="dropdown-item" href="#">Beverages & Juices</a>
             <a class="dropdown-item" href="#">Beauty & Healthcare</a>
         </div>
@@ -568,7 +608,7 @@
 		        <div class="navlinks23">
 		        <a href="index.jsp" class="nav-link2">Home</a>
 		        <a href="#" class="nav-link2">Best Deals</a>
-		        <a href="#" class="nav-link2">Track Orders</a>
+		        <a href="cartDetails.jsp" class="nav-link2">Track Orders</a>
 		        
 		        
 		        <a href="addProduct.jsp" class="nav-link2">Add Product</a>
@@ -588,6 +628,14 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
 	
     <script>
+   
+    // Fetch total amount using JavaScript
+    var totalAmount = document.getElementById('totalAmount').value;
+
+    // Update the content in your navbar
+    var cartTotalAmountElement = document.getElementById('cartTotalAmount');
+    cartTotalAmountElement.innerText = 'Total Cart Amount: ' + totalAmount + ' Rupees';
+
       const hamburgerMenu = document.querySelector('.hamburger-menu');
 const hamburgerMenuLinks = document.querySelector('.hamburger-menu-links');
 
