@@ -69,10 +69,9 @@
 							id="producttype" class="form-control" required>
 							<option value="OrganicVegetables">Organic Vegetables</option>
 							<option value="OrganicFruits">Organic Fruits</option>
-							<option value="camera"></option>
-							<option value="laptop">LAPTOP</option>
+							
 							<option value="SnacksandBiscuits">Snacks and Biscuits</option>
-							<option value="speaker">SPEAKER</option>
+							<option value="GroceryItem">Grocery Items</option>
 							<option value="other">Some Other Appliances</option>
 						</select>
 					</div>

@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ page
-	import="com.green.service.impl.*, com.green.service.*,com.green.beans.*,java.util.*,javax.servlet.ServletOutputStream,java.io.*"%>
+	import="com.green.service.impl.*, com.green.service.*,com.green.beans.*,java.util.*,jakarta.servlet.ServletOutputStream,java.io.*"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -80,14 +80,14 @@
 						%>
 						<label for="producttype">Product Type</label> <select name="type"
 							id="producttype" class="form-control" required>
-							<option value="mobile"
-								<%="mobile".equalsIgnoreCase(ptype) ? "selected" : ""%>>MOBILE</option>
-							<option value="tv"
-								<%="tv".equalsIgnoreCase(ptype) ? "selected" : ""%>>TV</option>
-							<option value="camera"
-								<%="camera".equalsIgnoreCase(ptype) ? "selected" : ""%>>CAMERA</option>
-							<option value="laptop"
-								<%="laptop".equalsIgnoreCase(ptype) ? "selected" : ""%>>LAPTOP</option>
+							<option value="OrganicVegetables"
+								<%="OrganicVegetables".equalsIgnoreCase(ptype) ? "selected" : ""%>>Organic Vegetables</option>
+							<option value="OrganicFruits"
+								<%="OrganicFruits".equalsIgnoreCase(ptype) ? "selected" : ""%>>Organic Fruits</option>
+							<option value="SnacksandBiscuits"
+								<%="SnacksandBiscuits".equalsIgnoreCase(ptype) ? "selected" : ""%>>Snacks and Biscuits</option>
+							<option value="GroceryItem"
+								<%="laptop".equalsIgnoreCase(ptype) ? "selected" : ""%>>Grocery Items</option>
 							<option value="tablet"
 								<%="tablet".equalsIgnoreCase(ptype) ? "selected" : ""%>>TABLET</option>
 							<option value="speaker"

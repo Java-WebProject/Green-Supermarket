@@ -10,7 +10,7 @@
 
 
 <jsp:include page="headerLinks.jsp" />
-<style type="text/css">
+<link rel="stylesheet" href="css/styleTeam.css">
 
 
 </style>
@@ -21,7 +21,7 @@
 
 <jsp:include page="header.jsp" />
 <h1 style="margin-top:90px;"align="center">Our Team</h1>
-<%@ include file="team.jsp"%>
+<%@ include file="teams.jsp"%>
 
 </body>
 </html>

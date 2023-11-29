@@ -365,8 +365,8 @@
     </div>
     <div class="hamburger-menu-links">
         <a href="#">Home</a>
-        <a href="#">Best Deals</a>
-        <a href="team.jsp">About Us</a>
+        <a href="products.jsp">All Products</a>
+        <a href="teams.jsp">About Us</a>
         <a href="#">Contact Us</a>
         <div class="dropdown">
         <div class="dropdown-toggle" id="categories-dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
@@ -376,7 +376,7 @@
         <div class="dropdown-menu" aria-labelledby="categories-dropdown-toggle">
             <a class="dropdown-item" href="#">Organic Vegetables </a>
             <a class="dropdown-item" href="organicfruits.jsp">Organic Fruits</a>
-            <a class="dropdown-item" href="#">Grocery Items</a>
+            <a class="dropdown-item" href="grocery.jsp">Grocery Items</a>
             <a class="dropdown-item" href="#">Bakery Items</a>
             <a class="dropdown-item" href="SnacksandBiscuits.jsp">Biscuits & Snacks</a>
             <a class="dropdown-item" href="#">Beverages & Juices</a>
@@ -391,12 +391,21 @@
         <div>
             <img src="images/logo.png" alt="Logo" class="logo">
         </div>
-        <form class="form-inline" action="index.jsp" method="get">
-        <div class="search-bar-container">
-            <i class="fa fa-search search-icon" font-size="15px" style="margin-left:5px;"></i>
-            <input type="text" class="search-bar" placeholder="Search...">
+        <form class="form-inline" action="products.jsp" method="get">
+    <div class="input-group">
+        <input type="text" class="form-control" style="width: 400px;
+            border-color: none;
+            background-color: #f2f2f2;
+            font-size: 16px;
+            outline: none;border-top-left-radius:10px;border-bottom-left-radius: 10px;" size="50" name="search"
+            placeholder="Search Products..." required>
+        <div class="input-group-append">
+            <button class="btn" type="submit" style="width: 100px; border-top-right-radius:10px;border-bottom-right-radius: 10px;font-size: 16px; background-color:#FEDE00; border-color:#FEDE00;height:33.5px;">
+                <i class="fas fa-search search-icon"></i> Search
+            </button>
         </div>
-        </form>
+    </div>
+</form>
         <div class="top-navbar-right">
             <a href="register.jsp">Signup</a>
             <a href="login.jsp">Login</a>
@@ -423,7 +432,7 @@
         <div class="dropdown-menu" aria-labelledby="categories-dropdown-toggle">
             <a class="dropdown-item" href="organicvege.jsp">Organic Vegetables</a>
             <a class="dropdown-item" href="organicfruits.jsp">Organic Fruits</a>
-            <a class="dropdown-item" href="#">Grocery Items</a>
+            <a class="dropdown-item" href="grocery.jsp">Grocery Items</a>
             <a class="dropdown-item" href="#">Bakery Items</a>
             <a class="dropdown-item" href="SnacksandBiscuits.jsp">Biscuits & Snacks</a>
             <a class="dropdown-item" href="#">Beverages & Juices</a>
@@ -434,10 +443,10 @@
         
         <div class="navlinks23">
         <a href="index.jsp" class="nav-link2">Home</a>
-        <a href="#" class="nav-link2">Best Deals</a>
+        <a href="products.jsp" class="nav-link2">All Products</a>
         <a href="cartDetails.jsp" class="nav-link2">Track Orders</a>
         <a href="#" class="nav-link2">Contact Us</a>
-        <a href="team.jsp" class="nav-link2">About Us</a>
+        <a href="teams.jsp" class="nav-link2">About Us</a>
         </div>
     </div>
     </div>
@@ -455,9 +464,11 @@
     </div>
     <div class="hamburger-menu-links">
         <a href="#">Home</a>
-        <a href="#">Best Deals</a>
+        <a href="products.jsp">All Products</a>
+         <a href="cartDetails.jsp">Track Orders</a>
         <a href="#">About Us</a>
-        <a href="team.jsp">Contact Us</a>
+         <a href="userProfile.jsp">Profile</a>
+        <a href="teams.jsp">Contact Us</a>
         <div class="dropdown">
         <div class="dropdown-toggle" id="categories-dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
             aria-expanded="false">
@@ -466,7 +477,7 @@
         <div class="dropdown-menu" aria-labelledby="categories-dropdown-toggle">
             <a class="dropdown-item" href="organicvege.jsp">Organic Vegetables </a>
             <a class="dropdown-item" href="organicfruits.jsp">Organic Fruits</a>
-            <a class="dropdown-item" href="#">Grocery Items</a>
+            <a class="dropdown-item" href="grocery.jsp">Grocery Items</a>
             <a class="dropdown-item" href="#">Bakery Items</a>
             <a class="dropdown-item" href="SnacksandBiscuits.jsp">Biscuits & Snacks</a>
             <a class="dropdown-item" href="#">Beverages & Juices</a>
@@ -481,12 +492,21 @@
         <div>
             <img src="images/logo.png" alt="Logo" class="logo">
         </div>
-        <form class="form-inline" action="index.jsp" method="get">
-        <div class="search-bar-container">
-            <i class="fa fa-search search-icon" font-size="15px" style="margin-left:5px;"></i>
-            <input type="text" class="search-bar" placeholder="Search...">
+        <form class="form-inline" action="products.jsp" method="get">
+    <div class="input-group">
+        <input type="text" class="form-control" style="width: 400px;
+            border-color: none;
+            background-color: #f2f2f2;
+            font-size: 16px;
+            outline: none;border-top-left-radius:10px;border-bottom-left-radius: 10px;" size="50" name="search"
+            placeholder="Search Products..." required>
+        <div class="input-group-append">
+            <button class="btn" type="submit" style="width: 100px; border-top-right-radius:10px;border-bottom-right-radius: 10px;font-size: 16px; background-color:#FEDE00; border-color:#FEDE00;height:33.5px;">
+                <i class="fas fa-search search-icon"></i> Search
+            </button>
         </div>
-        </form>
+    </div>
+</form>
         <div class="top-navbar-right">
             <a href="register.jsp">Signup</a>
             <a href="login.jsp">Logout</a>
@@ -513,7 +533,7 @@
         <div class="dropdown-menu" aria-labelledby="categories-dropdown-toggle">
             <a class="dropdown-item" href="organicvege.jsp">Organic Vegetables</a>
             <a class="dropdown-item" href="organicfruits.jsp">Organic Fruits</a>
-            <a class="dropdown-item" href="#">Grocery Items</a>
+            <a class="dropdown-item" href="grocery.jsp">Grocery Items</a>
             <a class="dropdown-item" href="#">Bakery Items</a>
             <a class="dropdown-item" href="#">Biscuits & Snacks</a>
             <a class="dropdown-item" href="SnacksandBiscuits.jsp">Beverages & Juices</a>
@@ -524,10 +544,11 @@
         
         <div class="navlinks23">
         <a href="index.jsp" class="nav-link2">Home</a>
-        <a href="#" class="nav-link2">Best Deals</a>
+        <a href="products.jsp" class="nav-link2">All Products</a>
         <a href="cartDetails.jsp" class="nav-link2">Track Orders</a>
+        <a href="userProfile.jsp" class="nav-link2">Profile</a>
         <a href="#" class="nav-link2">Contact Us</a>
-        <a href="team.jsp" class="nav-link2">About Us</a>
+        <a href="teams.jsp" class="nav-link2">About Us</a>
         </div>
     </div>
     </div>
@@ -545,10 +566,10 @@
 		    </div>
 		    <div class="hamburger-menu-links">
 		        <a href="#">Home</a>
-		        <a href="#">Best Deals</a>
+		        <a href="products.jsp">All Products</a>
 		         <a href="addProduct.jsp">Add Product</a>
-		        <a href="removeProduct.jsp">Remove Product</a>
-		        <a href="updateProductById.jsp">Update Product</a>
+		        <a href="adminViewProduct.jsp">Update Products</a>
+		        <a href="adminStock.jsp">Stock</a>
 		        <div class="categories-dropdown">
     
     <div class="dropdown">
@@ -559,7 +580,7 @@
         <div class="dropdown-menu" aria-labelledby="categories-dropdown-toggle">
             <a class="dropdown-item" href="organicvege.jsp">Organic Vegetables</a>
             <a class="dropdown-item" href="organicfruits.jsp">Organic Fruits</a>
-            <a class="dropdown-item" href="#">Grocery Items</a>
+            <a class="dropdown-item" href="grocery.jsp">Grocery Items</a>
             <a class="dropdown-item" href="#">Bakery Items</a>
             <a class="dropdown-item" href="SnacksandBiscuits.jsp">Biscuits & Snacks</a>
             <a class="dropdown-item" href="#">Beverages & Juices</a>
@@ -577,12 +598,23 @@
 		        <div>
 		            <img src="images/logo.png" alt="Logo" class="logo">
 		        </div>
-		        <form class="form-inline" action="index.jsp" method="get">
-		        <div class="search-bar-container">
-		            <i class="fas fa-search search-icon"></i>
-		            <input type="text" class="search-bar" placeholder="Search...">
-		        </div>
-		        </form>
+		        <form class="form-inline" action="products.jsp" method="get">
+    <div class="input-group">
+        <input type="text" class="form-control" style="width: 400px;
+            border-color: none;
+            background-color: #f2f2f2;
+            font-size: 16px;
+            outline: none;border-top-left-radius:10px;border-bottom-left-radius: 10px;" size="50" name="search"
+            placeholder="Search Products..." required>
+        <div class="input-group-append">
+            <button class="btn" type="submit" style="width: 100px; border-top-right-radius:10px;border-bottom-right-radius: 10px;font-size: 16px; background-color:#FEDE00; border-color:#FEDE00;height:33.5px;">
+                <i class="fas fa-search search-icon"></i> Search
+            </button>
+        </div>
+    </div>
+</form>
+
+
 		        <div class="top-navbar-right">
 		            <a href="register.jsp">Signup</a>
 		            <a href="./LogoutSrv">Logout</a>
@@ -598,7 +630,7 @@
         <div class="dropdown-menu" aria-labelledby="categories-dropdown-toggle">
             <a class="dropdown-item" href="organicvege.jsp">Organic Vegetables</a>
             <a class="dropdown-item" href="organicfruits.jsp">Organic Fruits</a>
-            <a class="dropdown-item" href="#">Grocery Items</a>
+            <a class="dropdown-item" href="grocery.jsp">Grocery Items</a>
             <a class="dropdown-item" href="#">Bakery Items</a>
             <a class="dropdown-item" href="SnacksandBiscuits.jsp">Biscuits & Snacks</a>
             <a class="dropdown-item" href="#">Beverages & Juices</a>
@@ -607,13 +639,13 @@
     </div>
 		        <div class="navlinks23">
 		        <a href="index.jsp" class="nav-link2">Home</a>
-		        <a href="#" class="nav-link2">Best Deals</a>
+		        <a href="products.jsp" class="nav-link2">All Products</a>
 		        <a href="cartDetails.jsp" class="nav-link2">Track Orders</a>
 		        
 		        
 		        <a href="addProduct.jsp" class="nav-link2">Add Product</a>
-		        <a href="removeProduct.jsp" class="nav-link2">Remove Product</a>
-		        <a href="updateProductById.jsp" class="nav-link2">Update Product</a>
+		        <a href="adminViewProduct.jsp" class="nav-link2">Update Products</a>
+		        <a href="adminStock.jsp" class="nav-link2">Stock</a>
 		        </div>
 		    </div>
 		    </div>

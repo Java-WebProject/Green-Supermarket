@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ page
-	import="com.green.service.impl.*, com.green.service.*,com.green.beans.*,java.util.*,javax.servlet.ServletOutputStream,java.io.*"%>
+	import="com.green.service.impl.*, com.green.service.*,com.green.beans.*,java.util.*,jakarta.servlet.ServletOutputStream,java.io.*"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,8 +15,16 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<style>
+		.topic{
+	text-align:center;
+	font-size:4rem;
+	margin-top:10px;
+}
+	
+	</style>
 </head>
-<body style="background-color: #E6F9E6;">
+<body style="background-color: #FFFFFF;">
 	<%
 	/* Checking the user credentials */
 	String userType = (String) session.getAttribute("usertype");
@@ -38,14 +46,12 @@
 
 	<jsp:include page="header.jsp" />
 
-	<div class="text-center"
-		style="color: green; font-size: 24px; font-weight: bold;">Stock
-		Products</div>
+	<center><h2 class="topic">Stock Details</h2></center>
 	<div class="container-fluid">
 		<div class="table-responsive ">
 			<table class="table table-hover table-sm">
 				<thead
-					style="background-color: #2c6c4b; color: white; font-size: 18px;">
+					style="background-color: #FEDE00; color: black; font-size: 18px;">
 					<tr>
 						<th>Image</th>
 						<th>ProductId</th>
@@ -69,7 +75,7 @@
 					%>
 
 					<tr>
-						<td><img src="./ShowImage?pid=<%=product.getProdId()%>"
+						<td><img src="<%=request.getContextPath()%>/images/<%=product.getProdImage()%>"
 							style="width: 50px; height: 50px;"></td>
 						<td><a
 							href="./updateProduct.jsp?prodid=<%=product.getProdId()%>"><%=product.getProdId()%></a></td>

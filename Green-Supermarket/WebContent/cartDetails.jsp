@@ -107,7 +107,7 @@
 				%>
 
 				<tr>
-					<td><img src="./ShowImage?pid=<%=product.getProdId()%>"
+					<td><img src="<%=request.getContextPath()%>/images/<%=product.getProdImage()%>"
 						style="width: 50px; height: 50px;"></td>
 					<td><%=product.getProdName()%></td>
 					<td><%=product.getProdPrice()%></td>

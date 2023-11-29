@@ -174,6 +174,19 @@ div .box .box3 span{
     padding: 0;
     box-sizing: border-box;
 }
+
+.ts {
+	font-size: 14px;
+}
+	:root {
+    --primary-color: #0F9D58;
+    --background-color: #f0f3f7;
+    --secon-color: #9da2ad;
+    --grey: #7a7a7b;
+    --white: #ffffff;
+}
+
+
 .container{
 	padding-top:10px;
 	padding-bottom:20px;
@@ -188,7 +201,16 @@ div .box .box3 span{
     text-align: center;
 }
 
+.cart-form {
+    display: inline-block; /* Ensures the form doesn't take full width */
+}
 
+
+
+.cart-btn2:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
 .cart-btn2 {
     width: 3rem;
     height: 3rem;
@@ -203,6 +225,7 @@ div .box .box3 span{
     transition: .5s ease-in-out;
     padding: 2rem; /* Add padding to the cart button */
     border-radius: 50%; /* Make the cart button circular */
+     background-color: transparent;
 }
 
 .cart-btn2:hover {
@@ -236,7 +259,7 @@ div .box .box3 span{
 
 .food-item2 {
     width: 25%;
-    height: 30rem;
+    height: 40rem;
     padding: 1rem;
 }
 
@@ -273,35 +296,37 @@ div .box .box3 span{
     
 }
 
-.img-holder2:hover {
-    transform: scale(2) rotate(45deg);
-}
+
 
 .item-info {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 3rem;
+   padding-bottom:15px;
     padding: 0 1rem;
-    bottom: 10;
-    left: 0;
+    margin-bottom: 0rem;
     width: 100%;
     padding-left:10px;
 }
 
 
 .item-info h3 {
-    color: var(--grey);
-    padding-left:10px;
+    color: black;
+    margin-left: 1.5rem;
+    margin-top: 0rem;
+    margin-bottom: 0rem; /* Adjusted margin-bottom */
+    font-size: 2rem;
+    font-weight: bold;
+   
     
-	margin-left:1.5rem;
-	
 }
-.item-info h4{
-	padding-left:10px;
-	padding-bottom:10px;
-	margin-bottom:1.5rem;
-	margin-left:1.5rem;
+
+.item-info h4 {
+    margin-left: 1.5rem;
+    margin-top: 0rem; /* Adjusted margin-top */
+    font-size: 1.8rem;
+    padding-top:0.8rem;
+    
 }
 
 .item-info>div:first-child {
@@ -339,6 +364,14 @@ div .box .box3 span{
     display: block;
 }
 
+.column {
+  float: left;
+  width: 30%; /* Adjust the width as needed */
+  padding-left: 10px; /* Adjust the left padding as needed */
+  padding-right: 10px; /* Adjust the right padding as needed */
+  box-sizing: border-box; /* Include padding in the width calculation */
+  margin-bottom: 20px; /* Add some margin between columns */
+}
 
 @media only screen and (max-width: 600px) {
 
@@ -372,9 +405,9 @@ div .box .box3 span{
     }
 }
 	.column {
-  float: left;
+   float: left;
   width: 33.33%;
-  padding-left: 80px;
+  padding-left: 70px;
   padding-top: 25px;
 }
 
@@ -385,15 +418,17 @@ div .box .box3 span{
   display: table;
 }
 
-
+.row {
+  max-width: 100%;
+  overflow-x: hidden; /* Hide horizontal overflow */
+}
 @media only screen and (max-width: 700px) {
   .column {
-  float: left;
+   float: left;
   width: 33.33%;
-  padding-left: 0px;
-  
+  padding-left: 70px;
+  padding-top: 25px;
 }
-
 /* Clearfix (clear floats) */
 .row::after {
   content: "";
@@ -440,22 +475,29 @@ div .box .box3 span{
 	ProductServiceImpl prodDao = new ProductServiceImpl();
 	List<ProductBean> products = new ArrayList<ProductBean>();
 
+	
 	String search = request.getParameter("search");
-	String type = request.getParameter("type");
-	String message = "All Products";
-	if (search != null) {
-		products = prodDao.searchAllProducts(search);
-		message = "Showing Results for '" + search + "'";
-	} else if (type != null) {
-		products = prodDao.getAllProductsByType(type);
-		message = "Showing Results for '" + type + "'";
-	} else {
-		products = prodDao.getAllProducts();
-	}
-	if (products.isEmpty()) {
-		message = "No items found for the search '" + (search != null ? search : type) + "'";
-		products = prodDao.getAllProducts();
-	}
+    String type = request.getParameter("type");
+
+    
+    String message = "All Products";
+
+    if (search != null) {
+        products = prodDao.searchAllProducts(search);
+
+        if (!products.isEmpty()) {
+            // If products are found, redirect to the first product page
+            String productId = products.get(0).getProdId();
+            response.sendRedirect("products.jsp?productId=" + productId);
+            return; // Stop further processing after the redirect
+        }
+    } else if (type != null) {
+        // Handle type-based search or display all products
+        products = prodDao.getAllProductsByType(type);
+        message = "Showing Results for '" + type + "'";
+    } else {
+        products = prodDao.getAllProducts();
+    }
 	%>
 
 	<jsp:include page="header.jsp" />
@@ -492,7 +534,7 @@ div .box .box3 span{
 
 	<!-- wrap starts -->
 <div class="row">
-  <div class="column">
+  <div class="column" >
     <img src="images/frame1.png" alt="Snow" style="width:70%">
   </div>
   <div class="column">
@@ -551,104 +593,96 @@ div .box .box3 span{
 	</div>
 	
 	<!-- Best deals starts -->
-       <section class="align-items-center" id="food-menu-section">
-        <div class="container">
-            <h1 class="heading">4 Best Deals</h1>
-            <div class="food-menu2">           
-                <div class="food-item-wrap2 all">
-                    <div class="food-item2 salad-type">
-                        <div class="item-wrap2 bottom-up play-on-scroll">
-                            <div class="item-img2">
-                                <div class="img-holder2 bg-img2"
-                                    style="background-image: url(images/coco1.jpg);"></div>
-                            </div>
-                            <div class="item-info">
-                                <div>
-                                    <h3>
-                                        Lorem ipsum
-                                    </h3>
-                                    <h4>
-                                        LKR 150.00
-                                    </h4>
-                                </div>
-                                <div class="cart-btn2">
-                                    <i class="bx bx-cart-alt"></i>
-                                </div>
-                            </div>
+	 <h1 class="heading">4 Best Deals</h1>
+    <section class="align-items-center" id="food-menu-section">
+    <div class="container">
+   
+        <div class="food-menu2">
+            <div class="food-item-wrap2 all">
+                
+                <div class="food-item2 salad-type">
+                    <div class="item-wrap2 bottom-up play-on-scroll">
+                        <div class="item-img2">
+                            <div class="img-holder2 bg-img2" style="background-image: url('images/Pic924007.jpg');"></div>
                         </div>
-                    </div>
-
-                    <div class="food-item2 lorem-type">
-                        <div class="item-wrap2 bottom-up play-on-scroll">
-                            <div class="item-img2">
-                                <div class="img-holder2 bg-img2"
-                                    style="background-image: url('images/jack.jpg');"></div>
+                        <div class="item-info">
+                            <div>
+                                <h3>Red Apple - 1Kg</h3>
+                                <h4>Rs.1380.00</h4>
                             </div>
-                            <div class="item-info">
-                                <div>
-                                    <h3>
-                                        Lorem ipsum
-                                    </h3>
-                                    <h4>
-                                        LKR 150.00
-                                    </h4>
-                                </div>
-                                <div class="cart-btn2">
-                                    <i class='bx bx-cart-alt'></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="food-item2 ipsum-type">
-                        <div class="item-wrap2 bottom-up play-on-scroll">
-                            <div class="item-img2">
-                                <div class="img-holder2 bg-img2"
-                                    style="background-image: url('images/veg.jpg');">
-                                </div>
-                            </div>
-                            <div class="item-info">
-                                <div>
-                                    <h3>
-                                        Lorem ipsum
-                                    </h3>
-                                    <h4>
-                                        LKR 150.00
-                                    </h4>
-                                </div>
-                                <div class="cart-btn2">
-                                    <i class='bx bx-cart-alt'></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="food-item2 lorem-type">
-                        <div class="item-wrap2 bottom-up play-on-scroll">
-                            <div class="item-img2">
-                                <div class="img-holder2 bg-img2"
-                                    style="background-image: url('images/veg.jpg');"></div>
-                            </div>
-                            <div class="item-info">
-                                <div>
-                                    <h3>
-                                        Lorem ipsum
-                                    </h3>
-                                    <h4>
-                                        LKR 150.00
-                                    </h4>
-                                </div>
-                                <div class="cart-btn2">
-                                    <i class='bx bx-cart-alt'></i>
-                                </div>
-                            </div>
+                           <form method="post">
+                                <button type="submit"
+                                    formaction=""
+                                    class="cart-btn2"><i class="bx bx-cart-alt"></i></button>
+                            </form>
+                           
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    </section>
+                <div class="food-item2 salad-type">
+                    <div class="item-wrap2 bottom-up play-on-scroll">
+                        <div class="item-img2">
+                            <div class="img-holder2 bg-img2" style="background-image: url('images/coco1.jpg');"></div>
+                        </div>
+                        <div class="item-info">
+                            <div>
+                                <h3>Fortune Coconut Oil - 1L</h3>
+                                <h4>Rs.700.00</h4>
+                            </div>
+                            
+                            <form method="post">
+                                <button type="submit"
+                                    formaction=""
+                                    class="cart-btn2"><i class="bx bx-cart-alt"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="food-item2 salad-type">
+                    <div class="item-wrap2 bottom-up play-on-scroll">
+                        <div class="item-img2">
+                            <div class="img-holder2 bg-img2" style="background-image: url('images/Pic913014.jpg');"></div>
+                        </div>
+                        <div class="item-info">
+                            <div>
+                                <h3>Cauliflower</h3>
+                                <h4>Rs.990.00</h4>
+                            </div>
+                            
+                            <form method="post">
+                                <button type="submit"
+                                    formaction=""
+                                    class="cart-btn2"><i class="bx bx-cart-alt"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="food-item2 salad-type">
+                    <div class="item-wrap2 bottom-up play-on-scroll">
+                        <div class="item-img2">
+                            <div class="img-holder2 bg-img2" style="background-image: url('images/30.jpg');"></div>
+                        </div>
+                        <div class="item-info">
+                            <div>
+                                <h3>Cheese Buttons</h3>
+                                <h4>Rs.300.00</h4>
+                            </div>
+                            <form method="post">
+                                <button type="submit"
+                                    formaction=""
+                                    class="cart-btn2"><i class="bx bx-cart-alt"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                
+           
+    
+</section>
+                   
     <!-- best deals ends -->
 
 

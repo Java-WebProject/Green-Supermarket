@@ -29,9 +29,9 @@
    flex-wrap: wrap;
    
 }
-.team .card
+.team .card2
 {
-   width: 330px;
+   width: calc(33.33% - 40px); /* 33.33% width for each card with some margin */
    height: 416px;
    padding: 60px 30px;
    margin: 20px;
@@ -40,14 +40,15 @@
                -0.5em -0.5em 1em #ffffff;
    border-radius: 20px;
 }
-.team .card .content
+
+.team .card2 .content2
 {
    display: flex;
    justify-content: center;
    align-items: center;
    flex-direction: column;
 }
-.team .card .content .imgBx
+.team .card2 .content2 .imgBx
 {
    width: 180px;
    height: 180px;
@@ -56,7 +57,7 @@
    margin-bottom: 20px;
    overflow: hidden;
 }
-.team .card .content .imgBx img
+.team .card2 .content2 .imgBx img
 {
    position: absolute;
    top: 0;
@@ -65,7 +66,7 @@
    height: 100%;
    object-fit: cover;
 }
-.team .card .content .contentBx h4
+.team .card2 .content2 .contentBx h4
 {
    color: #36187d;
    font-size: 1.7rem;
@@ -73,18 +74,18 @@
    text-align: center;
    letter-spacing: 1px;
 }
-.team .card .content .contentBx h5
+.team .card2 .content2 .contentBx h5
 {
    color: #6c758f;
    font-size: 1.2rem;
    font-weight: bold;
    text-align: center;
 }
-.team .card .content .sci
+.team .card2 .content2 .sci
 {
    margin-top: 10px;
 }
-.team .card .content .sci a
+.team .card2 .content2 .sci a
 {
    text-decoration: none;
    color: #6c758f;
@@ -93,7 +94,7 @@ margin: 30px;
 
    transition: color 0.4s;
 }
-.team .card .content .sci a:hover
+.team .card2 .content2 .sci a:hover
 {
    color: #04A702;
 }
