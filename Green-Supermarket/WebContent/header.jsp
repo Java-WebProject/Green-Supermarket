@@ -374,12 +374,12 @@
             &nbsp;Categories
         </div>
         <div class="dropdown-menu" aria-labelledby="categories-dropdown-toggle">
-            <a class="dropdown-item" href="#">Organic Vegetables </a>
+            <a class="dropdown-item" href="organicvege.jsp">Organic Vegetables </a>
             <a class="dropdown-item" href="organicfruits.jsp">Organic Fruits</a>
             <a class="dropdown-item" href="grocery.jsp">Grocery Items</a>
             <a class="dropdown-item" href="#">Bakery Items</a>
             <a class="dropdown-item" href="SnacksandBiscuits.jsp">Biscuits & Snacks</a>
-            <a class="dropdown-item" href="#">Beverages & Juices</a>
+            <a class="dropdown-item" href="Drinks.jsp">Beverages & Drinks</a>
             <a class="dropdown-item" href="#">Beauty & Healthcare</a>
         </div>
     </div>
@@ -435,7 +435,7 @@
             <a class="dropdown-item" href="grocery.jsp">Grocery Items</a>
             <a class="dropdown-item" href="#">Bakery Items</a>
             <a class="dropdown-item" href="SnacksandBiscuits.jsp">Biscuits & Snacks</a>
-            <a class="dropdown-item" href="#">Beverages & Juices</a>
+            <a class="dropdown-item" href="Drinks.jsp">Beverages & Drinks</a>
             <a class="dropdown-item" href="#">Beauty & Healthcare</a>
         </div>
     </div>
@@ -482,7 +482,7 @@
             <a class="dropdown-item" href="grocery.jsp">Grocery Items</a>
             <a class="dropdown-item" href="#">Bakery Items</a>
             <a class="dropdown-item" href="SnacksandBiscuits.jsp">Biscuits & Snacks</a>
-            <a class="dropdown-item" href="#">Beverages & Juices</a>
+            <a class="dropdown-item" href="Drinks.jsp">Beverages & Drinks</a>
             <a class="dropdown-item" href="#">Beauty & Healthcare</a>
         </div>
     </div>
@@ -537,8 +537,8 @@
             <a class="dropdown-item" href="organicfruits.jsp">Organic Fruits</a>
             <a class="dropdown-item" href="grocery.jsp">Grocery Items</a>
             <a class="dropdown-item" href="#">Bakery Items</a>
-            <a class="dropdown-item" href="#">Biscuits & Snacks</a>
-            <a class="dropdown-item" href="SnacksandBiscuits.jsp">Beverages & Juices</a>
+            <a class="dropdown-item" href="SnacksandBiscuits.jsp">Biscuits & Snacks</a>
+            <a class="dropdown-item" href="Drinks.jsp">Beverages & Drinks</a>
             <a class="dropdown-item" href="#">Beauty & Healthcare</a>
         </div>
     </div>
@@ -586,7 +586,7 @@
             <a class="dropdown-item" href="grocery.jsp">Grocery Items</a>
             <a class="dropdown-item" href="#">Bakery Items</a>
             <a class="dropdown-item" href="SnacksandBiscuits.jsp">Biscuits & Snacks</a>
-            <a class="dropdown-item" href="#">Beverages & Juices</a>
+            <a class="dropdown-item" href="Drinks.jsp">Beverages & Drinks</a>
             <a class="dropdown-item" href="#">Beauty & Healthcare</a>
         </div>
     </div>
@@ -636,7 +636,7 @@
             <a class="dropdown-item" href="grocery.jsp">Grocery Items</a>
             <a class="dropdown-item" href="#">Bakery Items</a>
             <a class="dropdown-item" href="SnacksandBiscuits.jsp">Biscuits & Snacks</a>
-            <a class="dropdown-item" href="#">Beverages & Juices</a>
+            <a class="dropdown-item" href="Drinks.jsp">Beverages & Drinks</a>
             <a class="dropdown-item" href="#">Beauty & Healthcare</a>
         </div>
     </div>

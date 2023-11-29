@@ -72,7 +72,8 @@
 							
 							<option value="SnacksandBiscuits">Snacks and Biscuits</option>
 							<option value="GroceryItem">Grocery Items</option>
-							<option value="other">Some Other Appliances</option>
+							<option value="other">Bakery</option>
+							<option value="Drinks">Beverages & Drinks</option>
 						</select>
 					</div>
 				</div>
