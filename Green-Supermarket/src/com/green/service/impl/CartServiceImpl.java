@@ -2,6 +2,7 @@ package com.green.service.impl;
 
 import java.sql.Connection;
 
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -153,6 +154,37 @@ public class CartServiceImpl implements CartService {
 
 		return count;
 	}
+	@Override
+	public double getCartSum(String userId) {
+	    double totalAmount = 0;
+
+	    Connection con = DBUtil.provideConnection();
+	    PreparedStatement ps = null;
+	    ResultSet rs = null;
+
+	    try {
+	        ps = con.prepareStatement("SELECT SUM(u.quantity * p.pprice) AS total_amount " +
+	                                  "FROM usercart u " +
+	                                  "JOIN product p ON u.prodid = p.pid " +
+	                                  "WHERE u.username = ?");
+	        ps.setString(1, userId);
+
+	        rs = ps.executeQuery();
+
+	        if (rs.next()) {
+	            totalAmount = rs.getDouble("total_amount");
+	        }
+	    } catch (SQLException e) {
+	        e.printStackTrace();
+	    } finally {
+	        DBUtil.closeConnection(con);
+	        DBUtil.closeConnection(ps);
+	        DBUtil.closeConnection(rs);
+	    }
+
+	    return totalAmount;
+	}
+
 
 	@Override
 	public String removeProductFromCart(String userId, String prodId) {
