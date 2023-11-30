@@ -225,7 +225,7 @@ margin: 30px;
 		<div class="card2">
 			<div class="content2">
 				<div class="imgBx">
-					<img src="./images/team3.jpg" alt="">
+					<img src="images/kalindu.jpeg" alt="">
 				</div>
 				<div class="contentBx">
 					<h4>Kalindu Perera</h4>
