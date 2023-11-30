@@ -383,8 +383,8 @@
             <a class="dropdown-item" href="#">Beauty & Healthcare</a>
         </div>
     </div>
-        <a href="#">Signup</a>
-        <a href="#">Login</a>
+        <a href="register.jsp">Signup</a>
+        <a href="Login.jsp">Login</a>
     </div>
 	<div class="top-navbar">
 
@@ -486,8 +486,8 @@
             <a class="dropdown-item" href="#">Beauty & Healthcare</a>
         </div>
     </div>
-        <a href="#">Signup</a>
-        <a href="#">Logout</a>
+        <a href="register.jsp">Signup</a>
+        <a href="./LogoutSrv">Logout</a>
     </div>
 	<div class="top-navbar">
 
@@ -511,7 +511,7 @@
 </form>
         <div class="top-navbar-right">
             <a href="register.jsp">Signup</a>
-            <a href="login.jsp">Logout</a>
+            <a href="./LogoutSrv">Logout</a>
             <a href="cartDetails.jsp" class="cart-icon">
               <i class="fas fa-shopping-cart"></i>
               
