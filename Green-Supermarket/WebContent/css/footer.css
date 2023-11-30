@@ -3,6 +3,7 @@ body {
     margin: 0;
     font-family: 'Amaranth', sans-serif;
     background: #ffffff;
+    margin-top:0;
 }
 
 a {
@@ -20,6 +21,7 @@ a:focus {
     position: relative;
     padding-top: 45px;
     background: #04A702;
+    margin-top: 0%;
 }
 
 

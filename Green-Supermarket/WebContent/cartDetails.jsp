@@ -18,7 +18,7 @@
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body style="background-color: #E6F9E6;">
+<body style="background-color: #FFFFFF;">
 
 	<%
 	/* Checking the user credentials */
@@ -61,16 +61,26 @@
 	<jsp:include page="header.jsp" />
 
 	<div class="text-center"
-		style="color: green; font-size: 24px; font-weight: bold;">Cart
+		style="color: black; font-size: 40px; ">Cart
 		Items</div>
-	<!-- <script>document.getElementById('mycart').innerHTML='<i data-count="20" class="fa fa-shopping-cart fa-3x icon-white badge" style="background-color:#333;margin:0px;padding:0px; margin-top:5px;"></i>'</script>
- -->
+	<%
+String statusMessage = (String) session.getAttribute("statusMessage");
+if (statusMessage != null && !statusMessage.isEmpty()) {
+%>
+    <div style="color: red; font-size: 16px; font-weight: bold; text-align:center;">
+        <%= statusMessage %>
+    </div>
+<%
+}
+session.removeAttribute("statusMessage"); // Clear the session attribute to avoid displaying the same message on subsequent requests
+%>
+	
 	<!-- Start of Product Items List -->
 	<div class="container">
 
 		<table class="table table-hover">
 			<thead
-				style="background-color: #186188; color: white; font-size: 16px; font-weight: bold;">
+				style="background-color: #FEDE00; color: black; font-size: 16px; font-weight: bold;">
 				<tr>
 					<th>Picture</th>
 					<th>Products</th>
@@ -82,7 +92,7 @@
 				</tr>
 			</thead>
 			<tbody
-				style="background-color: white; font-size: 15px; font-weight: bold;">
+				style="background-color: #E6F9E6; font-size: 15px; font-weight: bold;">
 
 
 
@@ -116,7 +126,7 @@
 								style="max-width: 70px;" min="0"> <input type="hidden"
 								name="pid" value="<%=product.getProdId()%>"> <input
 								type="submit" name="Update" value="Update"
-								style="max-width: 80px;">
+								style="max-width: 80px; border-radius:25px; margin-left:25px;">
 						</form></td>
 					<td><a
 						href="cartDetails.jsp?add=1&uid=<%=userName%>&pid=<%=product.getProdId()%>&avail=<%=product.getProdQuantity()%>&qty=<%=prodQuantity%>"><i
@@ -132,7 +142,7 @@
 				}
 				%>
 
-				<tr style="background-color: grey; color: white;">
+				<tr style="background-color: #FEDE00; color: black;">
 					<td colspan="6" style="text-align: center;">Total Amount to
 						Pay (in Rupees)</td>
 					<td><%=totAmount%></td>
@@ -144,10 +154,10 @@
 					<td colspan="4" style="text-align: center;">
 					<td><form method="post">
 							<button formaction="userHome.jsp"
-								style="background-color: black; color: white;">Cancel</button>
+								style="background-color: black; color: white; border-radius:10px;">Cancel</button>
 						</form></td>
 					<td colspan="2" align="center"><form method="post">
-							<button style="background-color: blue; color: white;"
+							<button style="background-color: blue; color: white; border-radius:10px;"
 								formaction="payment.jsp?amount=<%=totAmount%>">Pay Now</button>
 						</form></td>
 

@@ -454,7 +454,9 @@
 	<%
 	} else if ("customer".equalsIgnoreCase(userType)) { //CUSTOMER HEADER
 
-	int notf = new CartServiceImpl().getCartCount((String) session.getAttribute("username"));
+	double notf = new CartServiceImpl().getCartSum((String) session.getAttribute("username"));
+	
+	
 	%>
 	<div class="mainnav">
 	<div class="hamburger-menu">
@@ -510,13 +512,13 @@
         <div class="top-navbar-right">
             <a href="register.jsp">Signup</a>
             <a href="login.jsp">Logout</a>
-            <a href="#" class="cart-icon">
+            <a href="cartDetails.jsp" class="cart-icon">
               <i class="fas fa-shopping-cart"></i>
               
 
              <span class="cart-total"></span> 
 
-             <span class="cart-total">Rs:</span> 
+             <span class="cart-total">Rs:<%=notf%></span> 
 
 
           </a>
@@ -570,6 +572,7 @@
 		         <a href="addProduct.jsp">Add Product</a>
 		        <a href="adminViewProduct.jsp">Update Products</a>
 		        <a href="adminStock.jsp">Stock</a>
+		        <a href="unshippedItems.jsp">Orders</a>
 		        <div class="categories-dropdown">
     
     <div class="dropdown">
@@ -641,8 +644,8 @@
 		        <a href="index.jsp" class="nav-link2">Home</a>
 		        <a href="products.jsp" class="nav-link2">All Products</a>
 		        <a href="cartDetails.jsp" class="nav-link2">Track Orders</a>
-		        
-		        
+		        <a href="shippedItems.jsp" class="nav-link2">Shipped</a>
+		        <a href="unshippedItems.jsp" class="nav-link2">Unshipped</a>
 		        <a href="addProduct.jsp" class="nav-link2">Add Product</a>
 		        <a href="adminViewProduct.jsp" class="nav-link2">Update Products</a>
 		        <a href="adminStock.jsp" class="nav-link2">Stock</a>

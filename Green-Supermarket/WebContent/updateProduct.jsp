@@ -49,7 +49,7 @@
 				style="border: 2px solid black; border-radius: 10px; background-color: #FFE5CC; padding: 10px;">
 				<div style="font-weight: bold;" class="text-center">
 					<div class="form-group">
-						<img src="./ShowImage?pid=<%=product.getProdId()%>"
+						<img src="<%=request.getContextPath()%>/images/<%=product.getProdImage()%>"
 							alt="Product Image" height="100px" />
 						<h2 style="color: green;">Product Update Form</h2>
 					</div>

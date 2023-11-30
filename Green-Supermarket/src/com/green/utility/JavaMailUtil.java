@@ -1,6 +1,7 @@
 package com.green.utility;
 
 import java.util.Properties;
+
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
