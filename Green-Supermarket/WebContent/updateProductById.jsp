@@ -13,8 +13,43 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<style>
+		
+	@import url('https://fonts.googleapis.com/css2?family=Amaranth&family=Reem+Kufi:wght@400;500;600;700&display=swap');
+
+
+
+    .maincontainer {
+    display: flex;
+    flex-direction: column; /* or row, depending on your desired layout */
+}
+	
+	.container1 {
+    position: relative;
+    max-width: 800px;
+    width: 100%;
+    padding: 25px;
+    backdrop-filter: blur(9px);
+    border: 2px solid rgba(255, 255, 255, .2);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    margin-bottom: 30px;
+    margin-left: 24%;
+    background: url('images/b.jpg'); /* Add the path to your background image */
+    background-size: cover; /* Ensure the background image covers the container */
+    background-repeat: no-repeat; /* Prevent background image repetition */
+    background-position: center; /* Center the background image */
+    z-index:2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+}
+</style>
+	<link rel="stylesheet" href="css/changes.css">
 </head>
-<body style="background-color: #E6F9E6;">
+<body style="background-color: #FFFFFF;">
 	<%
 	/* Checking the user credentials */
 	String userType = (String) session.getAttribute("usertype");
@@ -36,12 +71,11 @@
 	<%
 	String message = request.getParameter("message");
 	%>
-	<div class="container">
-		<div class="row"
-			style="margin-top: 5px; margin-left: 2px; margin-right: 2px;">
+	<section class="container1">
+		
 			<form action="updateProduct.jsp" method="post"
 				class="col-md-4 col-md-offset-4"
-				style="border: 2px solid black; border-radius: 10px; background-color: #FFE5CC; padding: 10px;">
+				style="border: 2px solid black; border-radius: 10px;  padding: 10px;">
 				<div style="font-weight: bold;" class="text-center">
 					<h3 style="color: green;">Product Update Form</h3>
 					<%
@@ -55,25 +89,25 @@
 					%>
 				</div>
 				<div></div>
-				<div class="row">
-					<div class="col-md-12 form-group">
+				<div class="input-box">
+					
 						<label for="last_name">Product Id</label> <input type="text"
 							placeholder="Enter Product Id" name="prodid" class="form-control"
 							id="last_name" required>
-					</div>
+					
 				</div>
-				<div class="row">
-					<div class="col-md-6 text-center" style="margin-bottom: 2px;">
+				<div class="input-box">
+					
 						<a href="adminViewProduct.jsp" class="btn btn-info">Cancel</a>
 					</div>
-					<div class="col-md-6 text-center">
+					<div class="input-box">
 						<button type="submit" class="btn btn-danger">Update
 							Product</button>
 					</div>
-				</div>
+				
 			</form>
-		</div>
-	</div>
+		
+	</section>
 
 	<%@ include file="footer.html"%>
 </body>
