@@ -367,7 +367,7 @@
         <a href="#">Home</a>
         <a href="products.jsp">All Products</a>
         <a href="teams.jsp">About Us</a>
-        <a href="#">Contact Us</a>
+        <a href="Feedback.jsp">Contact Us</a>
         <div class="dropdown">
         <div class="dropdown-toggle" id="categories-dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
             aria-expanded="false">
@@ -445,7 +445,7 @@
         <a href="index.jsp" class="nav-link2">Home</a>
         <a href="products.jsp" class="nav-link2">All Products</a>
         <a href="cartDetails.jsp" class="nav-link2">Track Orders</a>
-        <a href="#" class="nav-link2">Contact Us</a>
+        <a href="Feedback.jsp" class="nav-link2">Contact Us</a>
         <a href="teams.jsp" class="nav-link2">About Us</a>
         </div>
     </div>
