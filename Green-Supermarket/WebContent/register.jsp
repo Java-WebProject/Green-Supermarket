@@ -62,7 +62,7 @@
 					<%
 					if (message != null) {
 					%>
-					<p style="color: blue;">
+					<p style="color: white; font-size:25px;">
 						<%=message%>
 					</p>
 					<%
@@ -101,7 +101,7 @@
 				</div>
 				<div class="input-box">
 					<input type="number" name="pincode" id="last_name" name="last_name"
-						placeholder=" Enter pin code" required />
+						placeholder=" Enter postal code" required />
 				</div>
 			</div>
 			<div class="input-box">
@@ -112,8 +112,8 @@
 			
 			<button type="submit" class="bdesign">Submit</button>
 			<div class="login-link">
-				<p>
-					Already have an account? <a href="login2.jsp" >Login</a>
+				<p style="color: white; font-size:15px;">
+					Already have an account? <a href="login2.jsp" style="font-size:15px;">Login</a>
 				</p>
 			</div>
 		</form>
