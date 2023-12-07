@@ -364,10 +364,10 @@
         <div></div>
     </div>
     <div class="hamburger-menu-links">
-        <a href="#">Home</a>
-        <a href="products.jsp">All Products</a>
+        <a href="index.jsp">Home</a>
+        <a href="AllProducts.jsp">All Products</a>
         <a href="teams.jsp">About Us</a>
-        <a href="Feedback.jsp">Contact Us</a>
+        <a href="feedback.jsp">Contact Us</a>
         <div class="dropdown">
         <div class="dropdown-toggle" id="categories-dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
             aria-expanded="false">
@@ -391,7 +391,7 @@
         <div>
             <img src="images/logo.png" alt="Logo" class="logo">
         </div>
-        <form class="form-inline" action="products.jsp" method="get">
+        <form class="form-inline" action="AllProducts.jsp" method="get">
     <div class="input-group">
         <input type="text" class="form-control" style="width: 400px;
             border-color: none;
@@ -443,9 +443,9 @@
         
         <div class="navlinks23">
         <a href="index.jsp" class="nav-link2">Home</a>
-        <a href="products.jsp" class="nav-link2">All Products</a>
-        <a href="cartDetails.jsp" class="nav-link2">Track Orders</a>
-        <a href="Feedback.jsp" class="nav-link2">Contact Us</a>
+        <a href="AllProducts.jsp" class="nav-link2">All Products</a>
+        <a href="orderDetails.jsp" class="nav-link2">Track Orders</a>
+        <a href="feedback.jsp" class="nav-link2">Contact Us</a>
         <a href="teams.jsp" class="nav-link2">About Us</a>
         </div>
     </div>
@@ -465,12 +465,12 @@
         <div></div>
     </div>
     <div class="hamburger-menu-links">
-        <a href="#">Home</a>
-        <a href="products.jsp">All Products</a>
-         <a href="cartDetails.jsp">Track Orders</a>
-        <a href="#">About Us</a>
+        <a href="index.jsp">Home</a>
+        <a href="AllProducts.jsp">All Products</a>
+         <a href="orderDetails.jsp">Track Orders</a>
+        <a href="teams.jsp">About Us</a>
          <a href="userProfile.jsp">Profile</a>
-        <a href="teams.jsp">Contact Us</a>
+        <a href="feedback.jsp">Contact Us</a>
         <div class="dropdown">
         <div class="dropdown-toggle" id="categories-dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
             aria-expanded="false">
@@ -494,7 +494,7 @@
         <div>
             <img src="images/logo.png" alt="Logo" class="logo">
         </div>
-        <form class="form-inline" action="products.jsp" method="get">
+        <form class="form-inline" action="AllProducts.jsp" method="get">
     <div class="input-group">
         <input type="text" class="form-control" style="width: 400px;
             border-color: none;
@@ -546,10 +546,10 @@
         
         <div class="navlinks23">
         <a href="index.jsp" class="nav-link2">Home</a>
-        <a href="products.jsp" class="nav-link2">All Products</a>
-        <a href="cartDetails.jsp" class="nav-link2">Track Orders</a>
+        <a href="AllProducts.jsp" class="nav-link2">All Products</a>
+        <a href="orderDetails.jsp" class="nav-link2">Track Orders</a>
         <a href="userProfile.jsp" class="nav-link2">Profile</a>
-        <a href="#" class="nav-link2">Contact Us</a>
+        <a href="feedback.jsp" class="nav-link2">Contact Us</a>
         <a href="teams.jsp" class="nav-link2">About Us</a>
         </div>
     </div>
@@ -567,8 +567,8 @@
 		        <div></div>
 		    </div>
 		    <div class="hamburger-menu-links">
-		        <a href="#">Home</a>
-		        <a href="products.jsp">All Products</a>
+		        <a href="index.jsp">Home</a>
+		        <a href="AllProducts.jsp">All Products</a>
 		         <a href="addProduct.jsp">Add Product</a>
 		        <a href="adminViewProduct.jsp">Update Products</a>
 		        <a href="adminStock.jsp">Stock</a>
@@ -601,7 +601,7 @@
 		        <div>
 		            <img src="images/logo.png" alt="Logo" class="logo">
 		        </div>
-		        <form class="form-inline" action="products.jsp" method="get">
+		        <form class="form-inline" action="AllProducts.jsp" method="get">
     <div class="input-group">
         <input type="text" class="form-control" style="width: 400px;
             border-color: none;
@@ -642,8 +642,8 @@
     </div>
 		        <div class="navlinks23">
 		        <a href="index.jsp" class="nav-link2">Home</a>
-		        <a href="products.jsp" class="nav-link2">All Products</a>
-		        <a href="cartDetails.jsp" class="nav-link2">Track Orders</a>
+		        <a href="AllProducts.jsp" class="nav-link2">All Products</a>
+		        <a href="orderDetails.jsp" class="nav-link2">Track Orders</a>
 		        <a href="shippedItems.jsp" class="nav-link2">Shipped</a>
 		        <a href="unshippedItems.jsp" class="nav-link2">Unshipped</a>
 		        <a href="addProduct.jsp" class="nav-link2">Add Product</a>
