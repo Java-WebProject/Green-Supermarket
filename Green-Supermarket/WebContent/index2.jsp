@@ -32,18 +32,18 @@
         <div class="rowss">
 
              <div class="col-sm-12 col-md-4">
-                <a class="lightbox" href="../images/Beauty card.png">
+                <a class="lightbox" href="">
                     <img src="images/Beauty card.png" alt="Beauty and healthcare">
                 </a>
             </div>
 
             <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="../images//Beverage card.png">
+                <a class="lightbox" href="Drinks.jsp">
                     <img src="images/Beverage card.png" alt="beverage">
                 </a>
             </div>
             <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="../images/frozen and meats.png">
+                <a class="lightbox" href="">
                     <img src="images/frozen and meats.png" alt="frozen mand meats">
                 </a>
             </div>
