@@ -9,9 +9,9 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
-    <link rel="stylesheet" href="css/bestdeals.css">
+   
      <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-	<link rel="stylesheet" href="card.css">
+	
 	<!-- jQuery -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 
@@ -488,7 +488,7 @@ div .box .box3 span{
         if (!products.isEmpty()) {
             // If products are found, redirect to the first product page
             String productId = products.get(0).getProdId();
-            response.sendRedirect("products.jsp?productId=" + productId);
+            response.sendRedirect("AllProducts.jsp?productId=" + productId);
             return; // Stop further processing after the redirect
         }
     } else if (type != null) {
@@ -582,7 +582,7 @@ div .box .box3 span{
 					</h3>
 				</div>
 				<div class="box4">
-					<a href="https://www.paypal.com/" class="btn"
+					<a href="feedback.jsp" class="btn"
 						style="width: 100%; margin-top: 14px; background-color: white; color:#ff9933; font-weight: 500;">Feedback</a>
 				</div>
 
@@ -682,7 +682,7 @@ div .box .box3 span{
            
     
 </section>
-<a href="feedback.jsp">feedabck</a>
+
                    
     <!-- best deals ends -->
 
