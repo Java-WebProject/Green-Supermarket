@@ -32,18 +32,14 @@
         <div class="rowss">
 
              <div class="col-sm-12 col-md-4">
-<<<<<<< HEAD
+
                 <a class="lightbox" href="../images/Beauty card 2.png">
                     <img src="images/Beauty card 2.png" alt="Beauty and healthcare">
-=======
-                <a class="lightbox" href="">
-                    <img src="images/Beauty card.png" alt="Beauty and healthcare">
->>>>>>> 8a7cfd83d71ded9ba6959c5dc4c8eb8ee18a7492
                 </a>
             </div>
 
             <div class="col-sm-6 col-md-4">
-<<<<<<< HEAD
+
                 <a class="lightbox" href="../images//Beverage card 2.png">
                     <img src="images/Beverage card 2.png" alt="beverage">
                 </a>
@@ -51,17 +47,9 @@
             <div class="col-sm-6 col-md-4">
                 <a class="lightbox" href="../images/Biscuit card 2.png">
                     <img src="images/Biscuit card 2.png" alt="biscuit and snacks">
-=======
-                <a class="lightbox" href="Drinks.jsp">
-                    <img src="images/Beverage card.png" alt="beverage">
-                </a>
+                    </a>
             </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="">
-                    <img src="images/frozen and meats.png" alt="frozen mand meats">
->>>>>>> 8a7cfd83d71ded9ba6959c5dc4c8eb8ee18a7492
-                </a>
-            </div>
+
             <div class="col-sm-12 col-md-8">
                 <a class="lightbox" href="../images/vege.png">
                     <img src="images/vege.png" alt="organic vegetables">
