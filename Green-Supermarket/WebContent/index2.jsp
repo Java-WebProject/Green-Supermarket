@@ -32,34 +32,34 @@
         <div class="rowss">
 
              <div class="col-sm-12 col-md-4">
-                <a class="lightbox" href="../images/Beauty card.png">
-                    <img src="images/Beauty card.png" alt="Beauty and healthcare">
+                <a class="lightbox" href="../images/Beauty card 2.png">
+                    <img src="images/Beauty card 2.png" alt="Beauty and healthcare">
                 </a>
             </div>
 
             <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="../images//Beverage card.png">
-                    <img src="images/Beverage card.png" alt="beverage">
+                <a class="lightbox" href="../images//Beverage card 2.png">
+                    <img src="images/Beverage card 2.png" alt="beverage">
                 </a>
             </div>
             <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="../images/frozen and meats.png">
-                    <img src="images/frozen and meats.png" alt="frozen mand meats">
+                <a class="lightbox" href="../images/Biscuit card 2.png">
+                    <img src="images/Biscuit card 2.png" alt="biscuit and snacks">
                 </a>
             </div>
             <div class="col-sm-12 col-md-8">
-                <a class="lightbox" href="../images/Vegerable card.png">
-                    <img src="images/Vegerable card.png" alt="organic fruits and vege">
+                <a class="lightbox" href="../images/vege.png">
+                    <img src="images/vege.png" alt="organic vegetables">
                 </a>
             </div>
             <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="https://www.keellssuper.com/product/2/7/78">
-                    <img src="images/Biscuit Card.png" alt="biscuit and snacks">
+                <a class="lightbox" href="../image/bakery.png">
+                    <img src="images/bakery.png" alt="Bakery Item">
                 </a>
             </div> 
             <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="../images/bakery card.png">
-                    <img src="images/bakery card.png" alt="bakery">
+                <a class="lightbox" href="../images/furit.png">
+                    <img src="images/furit.png" alt="organic furit">
                 </a>
             </div>
 
