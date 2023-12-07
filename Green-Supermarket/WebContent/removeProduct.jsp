@@ -9,12 +9,19 @@
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/changes.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	        <link href="css/footer.css" rel="stylesheet">
 </head>
-<body style="background-color: #E6F9E6;">
+<body style="background-color: #FFFFFF;">
 	<%
 	/* Checking the user credentials */
 	String userType = (String) session.getAttribute("usertype");
@@ -58,26 +65,78 @@
 					%>
 				</div>
 				<div></div>
-				<div class="row">
-					<div class="col-md-12 form-group">
-						<label for="last_name">Product Id</label> <input type="text"
-							placeholder="Enter Product Id" name="prodid" class="form-control"
-							id="last_name" required>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-6 text-center" style="margin-bottom: 2px;">
-						<a href="adminViewProduct.jsp" class="btn btn-info">Cancel</a>
-					</div>
-					<div class="col-md-6 text-center">
-						<button type="submit" class="btn btn-danger">Remove
-							Product</button>
-					</div>
-				</div>
+				
 			</form>
 		</div>
 	</div>
 
-	<%@ include file="footer.html"%>
+	<div class="footer">
+            <div class="container">
+                
+                <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="footer-about">
+                            <h3>About Us</h3>
+                            <p>
+                                Green Supermarket, where sustainability meets convenience. At Green Supermarket, we are committed to providing you with a diverse selection of high-quality, locally-sourced, and eco-friendly products. Our mission is to create a greener shopping experience that not only meets your needs but also aligns with your values.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-8">
+                        <div class="row">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="footer-link">
+                                    <h3>Categories</h3>
+                                    <a href="organicvege.jsp">Organic Vegetables </a>
+						            <a href="organicfruits.jsp">Organic Fruits</a>
+						            <a href="grocery.jsp">Grocery Items</a>
+						            <a href="Bakery.jsp">Bakery Items</a>
+						            <a href="SnacksandBiscuits.jsp">Biscuits & Snacks</a>
+						            <a href="Drinks.jsp">Beverages & Juices</a>
+						            <a href="#">Beauty & Healthcare</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="footer-link">
+                                    <h3>Useful Links</h3>
+                                    <a href="index.jsp">Home</a>
+                                    <a href="AllProducts.jsp">All Products</a>
+                                    <a href="teams.jsp">About Us</a>
+                                    <a href="feedback.jsp">Contact Us</a>
+                                    <a href="register.jsp">Sign Up</a>
+                                    <a href="login.jsp">Login</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="footer-contact">
+                                    <h3>Get In Touch</h3>
+                                    <p><i class="fa fa-map-marker-alt"></i>&nbsp; &nbsp;Pitipana,Homagama</p>
+                                    <p><i class="fa fa-phone-alt"></i>&nbsp; 011 123 1234</p>
+                                    <p><i class="fa fa-envelope"></i>&nbsp; green@gmail.com</p>
+                                    <div class="footer-social">
+                                        <a href=""><i class="fab fa-twitter" style="font-size:15px; padding-right: 5px; color: #FEDE00;"></i></a>
+                                        <a href=""><i class="fab fa-facebook-f" style="font-size:15px; padding-right: 5px; color: #FEDE00;"></i></a>
+                                        <a href=""><i class="fab fa-youtube" style="font-size:15px; padding-right: 5px;color: #FEDE00;"></i></a>
+                                        <a href=""><i class="fab fa-instagram" style="font-size:15px; padding-right: 5px; color: #FEDE00;"></i></a>
+                                        <a href=""><i class="fab fa-linkedin-in" style="font-size:15px; padding-right: 5px; color: #FEDE00;"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container copyright">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>&copy; <a href="#">Green Supermarket</a>, All Right Reserved.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>Developed By <a href="#">Group A19</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
 </body>
 </html>
