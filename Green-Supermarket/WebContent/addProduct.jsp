@@ -108,6 +108,7 @@
 							<option value="GroceryItem">Grocery Items</option>
 							<option value="other">Bakery</option>
 							<option value="Drinks">Beverages & Drinks</option>
+							<option value="beauty">Beauty & Healthcare</option>
 						</select>
 					</div>
 			

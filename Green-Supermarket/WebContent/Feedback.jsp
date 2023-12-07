@@ -205,7 +205,7 @@
 
 </head>
 <body>
-<jsp:include page="header.jsp" />
+
 <section>
     <div align="center"><h1 style="font-size:50px;margin-top: 30px;color:white;">Feedback Form</h1></div>
 </section>

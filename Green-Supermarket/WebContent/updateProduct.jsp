@@ -120,13 +120,12 @@
 								<%="SnacksandBiscuits".equalsIgnoreCase(ptype) ? "selected" : ""%>>Snacks and Biscuits</option>
 							<option value="GroceryItem"
 								<%="laptop".equalsIgnoreCase(ptype) ? "selected" : ""%>>Grocery Items</option>
-							<option value="tablet"
-								<%="tablet".equalsIgnoreCase(ptype) ? "selected" : ""%>>TABLET</option>
-							<option value="speaker"
-								<%="speaker".equalsIgnoreCase(ptype) ? "selected" : ""%>>SPEAKER</option>
 							<option value="other"
-								<%="other".equalsIgnoreCase(ptype) ? "selected" : ""%>>Some
-								Other Appliances</option>
+								<%="tablet".equalsIgnoreCase(ptype) ? "selected" : ""%>>Bakery</option>
+							<option value="Drinks"
+								<%="speaker".equalsIgnoreCase(ptype) ? "selected" : ""%>>Beverage and Drinks</option>
+							<option value="beauty"
+								<%="other".equalsIgnoreCase(ptype) ? "selected" : ""%>>Beauty & Healthcare</option>
 						</select>
 					</div>
 				

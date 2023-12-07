@@ -24,45 +24,42 @@
 <div class="cont gallery-cont">
     <h1 style="font-family:'Amaranth',sans-serif;" class="heading">Shop by category</h1>
 
-    
-
-    
     <div class="tz-gallery">
 
         <div class="rowss">
 
              <div class="col-sm-12 col-md-4">
 
-                <a class="lightbox" href="../images/Beauty card 2.png">
-                    <img src="images/Beauty card 2.png" alt="Beauty and healthcare">
+                <a class="lightbox" href="organicfruits.jsp">
+                    <img src="images/furit.png" alt="organic furit">
                 </a>
             </div>
 
             <div class="col-sm-6 col-md-4">
-
-                <a class="lightbox" href="../images//Beverage card 2.png">
+                <a class="lightbox" href="Drinks.jsp">
                     <img src="images/Beverage card 2.png" alt="beverage">
                 </a>
             </div>
             <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="../images/Biscuit card 2.png">
+                <a class="lightbox" href="SnacksandBiscuits.jsp">
                     <img src="images/Biscuit card 2.png" alt="biscuit and snacks">
+
                     </a>
             </div>
-
+            
             <div class="col-sm-12 col-md-8">
-                <a class="lightbox" href="../images/vege.png">
+                <a class="lightbox" href="organicvege.jsp">
                     <img src="images/vege.png" alt="organic vegetables">
                 </a>
             </div>
             <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="../image/bakery.png">
+                <a class="lightbox" href="Bakery.jsp">
                     <img src="images/bakery.png" alt="Bakery Item">
                 </a>
             </div> 
             <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="../images/furit.png">
-                    <img src="images/furit.png" alt="organic furit">
+                <a class="lightbox" href="beauty.jsp">
+                    <img src="images/Beauty card 2.png" alt="Beauty and healthcare">
                 </a>
             </div>
 

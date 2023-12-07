@@ -558,7 +558,7 @@ div .box .box3 span{
 				<div class="box1">
 					<h3 style="width: 100%; text-align: right; color: white;">
 						Secure Payments <br> with Paypal<br><br>
-							<p style="color: #D1CFCF;">Don't
+							<p style="color: #D1CFCF;"> Don't
 							have a papal account?<br>Click here to create paypal
 								account</p>
 					</h3>

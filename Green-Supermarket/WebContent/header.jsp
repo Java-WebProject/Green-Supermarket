@@ -380,7 +380,7 @@
             <a class="dropdown-item" href="Bakery.jsp">Bakery Items</a>
             <a class="dropdown-item" href="SnacksandBiscuits.jsp">Biscuits & Snacks</a>
             <a class="dropdown-item" href="Drinks.jsp">Beverages & Drinks</a>
-            <a class="dropdown-item" href="#">Beauty & Healthcare</a>
+            <a class="dropdown-item" href="beauty.jsp">Beauty & Healthcare</a>
         </div>
     </div>
         <a href="register.jsp">Signup</a>
@@ -436,7 +436,7 @@
             <a class="dropdown-item" href="Bakery.jsp">Bakery Items</a>
             <a class="dropdown-item" href="SnacksandBiscuits.jsp">Biscuits & Snacks</a>
             <a class="dropdown-item" href="Drinks.jsp">Beverages & Drinks</a>
-            <a class="dropdown-item" href="#">Beauty & Healthcare</a>
+            <a class="dropdown-item" href="beauty.jsp">Beauty & Healthcare</a>
         </div>
     </div>
 
@@ -483,7 +483,7 @@
             <a class="dropdown-item" href="Bakery.jsp">Bakery Items</a>
             <a class="dropdown-item" href="SnacksandBiscuits.jsp">Biscuits & Snacks</a>
             <a class="dropdown-item" href="Drinks.jsp">Beverages & Drinks</a>
-            <a class="dropdown-item" href="#">Beauty & Healthcare</a>
+            <a class="dropdown-item" href="beauty.jsp">Beauty & Healthcare</a>
         </div>
     </div>
         <a href="register.jsp">Signup</a>
@@ -539,7 +539,7 @@
             <a class="dropdown-item" href="Bakery.jsp">Bakery Items</a>
             <a class="dropdown-item" href="SnacksandBiscuits.jsp">Biscuits & Snacks</a>
             <a class="dropdown-item" href="Drinks.jsp">Beverages & Drinks</a>
-            <a class="dropdown-item" href="#">Beauty & Healthcare</a>
+            <a class="dropdown-item" href="beauty.jsp">Beauty & Healthcare</a>
         </div>
     </div>
 
@@ -587,7 +587,7 @@
             <a class="dropdown-item" href="Bakery.jsp">Bakery Items</a>
             <a class="dropdown-item" href="SnacksandBiscuits.jsp">Biscuits & Snacks</a>
             <a class="dropdown-item" href="Drinks.jsp">Beverages & Drinks</a>
-            <a class="dropdown-item" href="#">Beauty & Healthcare</a>
+            <a class="dropdown-item" href="beauty.jsp">Beauty & Healthcare</a>
         </div>
     </div>
 
@@ -637,7 +637,7 @@
             <a class="dropdown-item" href="Bakery.jsp">Bakery Items</a>
             <a class="dropdown-item" href="SnacksandBiscuits.jsp">Biscuits & Snacks</a>
             <a class="dropdown-item" href="Drinks.jsp">Beverages & Drinks</a>
-            <a class="dropdown-item" href="#">Beauty & Healthcare</a>
+            <a class="dropdown-item" href="beauty.jsp">Beauty & Healthcare</a>
         </div>
     </div>
 		        <div class="navlinks23">
