@@ -17,7 +17,7 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="css/changes.css">
 </head>
-<body style="background-color: #E6F9E6;">
+<body style="background-color: #ffffff;">
 	<%
 	/* Checking the user credentials */
 	String userType = (String) session.getAttribute("usertype");
@@ -39,13 +39,13 @@
 	<jsp:include page="header.jsp" />
 
 	<div class="text-center"
-		style="color: green; font-size: 24px; font-weight: bold;">UnShipped
+		style="color: Black; font-size: 28px; font-weight: bold;">Unshipped
 		Orders</div>
 	<div class="container-fluid">
 		<div class="table-responsive ">
 			<table class="table table-hover table-sm">
 				<thead
-					style="background-color: #700fb7; color: white; font-size: 16px;">
+					style="background-color: #700fb7; color: white; font-size: 24px;">
 					<tr>
 						<th>TransactionId</th>
 						<th>ProductId</th>
@@ -75,7 +75,7 @@
 							count++;
 					%>
 
-					<tr>
+					<tr style="font-size: 20px;">
 						<td><%=transId%></td>
 						<td><a href="./updateProduct.jsp?prodid=<%=prodId%>"><%=prodId%></a></td>
 						<td><%=userId%></td>
