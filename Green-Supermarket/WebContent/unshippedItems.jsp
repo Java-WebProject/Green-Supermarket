@@ -50,7 +50,7 @@
 						<th>TransactionId</th>
 						<th>ProductId</th>
 						<th>User Email Id</th>
-						<th>Addrddddess</th>
+						<th>Address</th>
 						<th>Quantity</th>
 						<th>Status</th>
 						<th>Action</th>
