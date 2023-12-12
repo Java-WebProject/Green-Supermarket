@@ -370,7 +370,7 @@
 <jsp:include page="header.jsp" />
 
 <section class="align-items-center" id="food-menu-section">
-	<center><h2 class="topic">Beverages & Drinks</h2></center>
+	<center><h2 class="topic">Beverage & Drinks</h2></center>
     <div class="container">
         <div class="food-menu2">
             <div class="food-item-wrap2 all">
