@@ -25,7 +25,7 @@ public class MailMessage {
 		}
 	}
 
-	public static void transactionSuccess(String recipientEmail, String name, String transId, double transAmount) {
+	public static void transactionSuccess(String recipientEmail, String name, String transId, String transAmount) {
 		String recipient = recipientEmail;
 		String subject = "Order Placed at Green Supermarket";
 		String htmlTextMessage = "<html>" + "  <body>" + "    <p>" + "      Hey " + name + ",<br/><br/>"
@@ -47,7 +47,7 @@ public class MailMessage {
 		}
 	}
 
-	public static void orderShipped(String recipientEmail, String name, String transId, double transAmount) {
+	public static void orderShipped(String recipientEmail, String name, String transId, String transAmount) {
 		String recipient = recipientEmail;
 		String subject = "Hurray!!, Your Order has been Shipped from Green Supermarket";
 		String htmlTextMessage = "<html>" + "  <body>" + "    <p>" + "      Hey " + name + ",<br/><br/>"

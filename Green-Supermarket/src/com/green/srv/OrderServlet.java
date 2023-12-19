@@ -35,8 +35,8 @@ public class OrderServlet extends HttpServlet {
 			response.sendRedirect("login.jsp?message=Session Expired, Login Again!!");
 		}
 
-		double paidAmount = Double.parseDouble(request.getParameter("amount"));
-		String status = new OrderServiceImpl().paymentSuccess(userName, paidAmount);
+		String total = request.getParameter("total");
+		String status = new OrderServiceImpl().paymentSuccess(userName, total);
 
 		PrintWriter pw = response.getWriter();
 		response.setContentType("text/html");

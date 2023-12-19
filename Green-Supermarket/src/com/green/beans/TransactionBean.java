@@ -15,7 +15,7 @@ public class TransactionBean implements Serializable {
 
 	private Timestamp transDateTime;
 
-	private double transAmount;
+	private String transAmount;
 
 	public TransactionBean() {
 		super();
@@ -30,7 +30,7 @@ public class TransactionBean implements Serializable {
 		this.transDateTime = timestamp;
 	}
 
-	public TransactionBean(String userName, double transAmount) {
+	public TransactionBean(String userName, String transAmount) {
 		super();
 		this.userName = userName;
 		this.transAmount = transAmount;
@@ -47,7 +47,7 @@ public class TransactionBean implements Serializable {
 
 	}
 
-	public TransactionBean(String transactionId, String userName, double transAmount) {
+	public TransactionBean(String transactionId, String userName, String transAmount) {
 		super();
 		this.transactionId = transactionId;
 		this.userName = userName;
@@ -62,7 +62,7 @@ public class TransactionBean implements Serializable {
 		this.transDateTime = timestamp;
 	}
 
-	public TransactionBean(String userName, Timestamp transDateTime, double transAmount) {
+	public TransactionBean(String userName, Timestamp transDateTime, String transAmount) {
 		super();
 		this.userName = userName;
 		this.transDateTime = transDateTime;
@@ -70,7 +70,7 @@ public class TransactionBean implements Serializable {
 		this.transAmount = transAmount;
 	}
 
-	public TransactionBean(String transactionId, String userName, Timestamp transDateTime, double transAmount) {
+	public TransactionBean(String transactionId, String userName, Timestamp transDateTime, String transAmount) {
 		super();
 		this.transactionId = transactionId;
 		this.userName = userName;
@@ -103,11 +103,11 @@ public class TransactionBean implements Serializable {
 		this.transDateTime = transDateTime;
 	}
 
-	public double getTransAmount() {
+	public String getTransAmount() {
 		return transAmount;
 	}
 
-	public void setTransAmount(double transAmount) {
+	public void setTransAmount(String transAmount) {
 		this.transAmount = transAmount;
 	}
 
