@@ -113,7 +113,7 @@
 			<button type="submit" class="bdesign">Submit</button>
 			<div class="login-link">
 				<p style="color: white; font-size:15px;">
-					Already have an account? <a href="login2.jsp" style="font-size:15px;">Login</a>
+					Already have an account? <a href="login.jsp" style="font-size:15px;">Login</a>
 				</p>
 			</div>
 		</form>

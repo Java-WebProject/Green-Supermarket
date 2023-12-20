@@ -18,6 +18,7 @@ public class OrderDetails implements Serializable {
 	private int shipped;
 	private Timestamp time;
 	private String prodImage;
+	private float total;
 
 	public String getOrderId() {
 		return orderId;

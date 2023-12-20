@@ -21,7 +21,7 @@ import com.green.utility.MailMessage;
 public class OrderServiceImpl implements OrderService {
 
 	@Override
-	public String paymentSuccess(String userName, double paidAmount) {
+	public String paymentSuccess(String userName, String total) {
 		String status = "Order Placement Failed!";
 
 		List<CartBean> cartItems = new ArrayList<CartBean>();
@@ -30,7 +30,7 @@ public class OrderServiceImpl implements OrderService {
 		if (cartItems.size() == 0)
 			return status;
 
-		TransactionBean transaction = new TransactionBean(userName, paidAmount);
+		TransactionBean transaction = new TransactionBean(userName, total);
 		boolean ordered = false;
 
 		String transactionId = transaction.getTransactionId();
@@ -119,7 +119,7 @@ public class OrderServiceImpl implements OrderService {
 			ps.setString(1, transaction.getTransactionId());
 			ps.setString(2, transaction.getUserName());
 			ps.setTimestamp(3, transaction.getTransDateTime());
-			ps.setDouble(4, transaction.getTransAmount());
+			ps.setString(4, transaction.getTransAmount());
 
 			int k = ps.executeUpdate();
 
