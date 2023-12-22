@@ -399,10 +399,21 @@
                                 <h4>USD <%=product.getProdPrice()%></h4>
                             </div>
                             <form method="post">
-                                <button type="submit"
-                                    formaction="./AddtoCart?uid=<%=userName%>&pid=<%=product.getProdId()%>&pqty=1"
-                                    class="cart-btn2"><i class="bx bx-cart-alt"></i></button>
-                            </form>
+                                
+                                    
+				
+			
+				
+				<button type="submit" formaction="./RemoveProductSrv?prodid=<%=product.getProdId()%>" style="background-color:red; padding:5px; color:white;">Remove
+					</button>
+				<br>
+				<br>
+				<button type="submit" formaction="updateProduct.jsp?prodid=<%=product.getProdId()%>" style="background-color:blue; padding:5px; color:white;">Update
+					</button>
+				<br>
+				<br>
+			</form>
+                           
                         </div>
                     </div>
                 </div>
