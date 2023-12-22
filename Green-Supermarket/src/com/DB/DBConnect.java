@@ -35,7 +35,7 @@ public class DBConnect {
 	public static Connection getConn() {
 		String dburl="jdbc:mysql://localhost:3306/shopping-cart";
 		String dbuser="root";
-		String dbpassword="avioniks2126";
+		String dbpassword="";
 
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
