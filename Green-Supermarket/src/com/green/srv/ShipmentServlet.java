@@ -41,13 +41,13 @@ public class ShipmentServlet extends HttpServlet {
 		String orderId = request.getParameter("orderid");
 		String prodId = request.getParameter("prodid");
 		String userName = request.getParameter("userid");
-		Double amount = Double.parseDouble(request.getParameter("amount"));
+		String total = request.getParameter("total");
 		String status = new OrderServiceImpl().shipNow(orderId, prodId);
 		String pagename = "shippedItems.jsp";
 		if ("FAILURE".equalsIgnoreCase(status)) {
 			pagename = "unshippedItems.jsp";
 		} else {
-			MailMessage.orderShipped(userName, new UserServiceImpl().getFName(userName), orderId, amount);
+			MailMessage.orderShipped(userName, new UserServiceImpl().getFName(userName), orderId, total);
 		}
 		PrintWriter pw = response.getWriter();
 		response.setContentType("text/html");

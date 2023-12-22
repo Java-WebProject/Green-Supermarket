@@ -41,7 +41,7 @@ public class LoginSrv extends HttpServlet {
         if (userType.equals("admin")) { // Login as Admin
             if (password.equals("admin") && userName.equals("admin@gmail.com")) {
                 // valid
-                RequestDispatcher rd = request.getRequestDispatcher("adminViewProduct.jsp");
+                RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
                 HttpSession session = request.getSession();
                 session.setAttribute("username", userName);
                 session.setAttribute("password", password);
