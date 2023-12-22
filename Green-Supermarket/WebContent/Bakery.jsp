@@ -368,7 +368,12 @@
 %>
 
 <jsp:include page="header.jsp" />
+<%
+	
+if ("customer".equalsIgnoreCase(userType) || userType == null) { //CUSTOMER HEADER
 
+	double notf = new CartServiceImpl().getCartSum((String) session.getAttribute("username"));
+	%>
 <section class="align-items-center" id="food-menu-section">
 	<center><h2 class="topic">Bakery Items</h2></center>
     <div class="container">
@@ -387,7 +392,7 @@
                         <div class="item-info">
                             <div>
                                 <h3><%=product.getProdName()%></h3>
-                                <h4>Rs <%=product.getProdPrice()%></h4>
+                                <h4>USD <%=product.getProdPrice()%></h4>
                             </div>
                             <form method="post">
                                 <button type="submit"
@@ -404,6 +409,53 @@
         </div>
     </div>
 </section>
+<%
+	} else { //ADMIN HEADER
+	%>
+	<section class="align-items-center" id="food-menu-section">
+	<center><h2 class="topic">Bakery Items</h2></center>
+    <div class="container">
+        <div class="food-menu2">
+            <div class="food-item-wrap2 all">
+                <%
+                    for (ProductBean product : products) {
+                        int cartQty = new CartServiceImpl().getCartItemCount(userName, product.getProdId());
+                %>
+                <div class="food-item2 salad-type">
+                    <div class="item-wrap2 bottom-up play-on-scroll">
+                        <div class="item-img2">
+                            <div class="img-holder2 bg-img2" style="background-image: url('<%=request.getContextPath()%>/images/<%=product.getProdImage()%>');"></div>
+
+                        </div>
+                        <div class="item-info">
+                            <div>
+                                <h3><%=product.getProdName()%></h3>
+                                <h4>USD <%=product.getProdPrice()%></h4>
+                            </div>
+                            <form method="post">
+                                <button type="submit" formaction="./RemoveProductSrv?prodid=<%=product.getProdId()%>" style="background-color:red; padding:5px; color:white;">Remove
+								</button>
+								<br>
+								<br>
+							<button type="submit" formaction="updateProduct.jsp?prodid=<%=product.getProdId()%>" style="background-color:blue; padding:5px; color:white;">Update
+							</button>
+								<br>
+								<br>
+							</form>
+                        </div>
+                    </div>
+                </div>
+                <%
+                    }
+                %>
+            </div>
+        </div>
+    </div>
+</section>
+<%
+	}
+	%>
+	
 <%@ include file="footer.html"%>
 </body>
 </html>
