@@ -47,7 +47,7 @@
 }
 </style>
 	
-<link rel="stylesheet" href="css/changes.css">
+
 </head>
 <body style="background-color: #FFFFFF;">
 	<%
@@ -94,9 +94,9 @@
 				<div></div>
 				
 				<div class="input-box">
-						<label for="last_name" style="color:black; font-size:15px;">Product Name</label> <input type="text"
+						<label for="name" style="color:black; font-size:15px;">Product Name</label> <input type="text"
 							placeholder="Enter Product Name" name="name" class="form-control"
-							id="last_name" required>
+							id="name" required>
 					</div>
 					<div class="input-box">
 						<label for="producttype" style="color:black; font-size:15px; padding-top:10px;">Product Type</label> <select name="type"
@@ -113,26 +113,26 @@
 					</div>
 			
 				<div class="input-box">
-					<label for="last_name" style="color:black; font-size:15px; padding-top:10px;">Product Description</label>
-					<textarea name="info" class="form-control" id="last_name" required></textarea>
+					<label for="info" style="color:black; font-size:15px; padding-top:10px;">Product Description</label>
+					<textarea name="info" class="form-control" id="info" required></textarea>
 				</div>
 				<div class="input-box">
 					
-						<label for="last_name" style="color:black; font-size:15px; padding-top:10px;">Unit Price</label> <input type="number"
+						<label for="price" style="color:black; font-size:15px; padding-top:10px;">Unit Price</label> <input type="number"
 							placeholder="Enter Unit Price" name="price" class="form-control"
-							id="last_name" required>
+							id="price" required>
 					</div>
 					<div class="input-box">
-						<label for="last_name" style="color:black; font-size:15px; padding-top:10px;">Stock Quantity</label> <input type="number"
+						<label for="quantity" style="color:black; font-size:15px; padding-top:10px;">Stock Quantity</label> <input type="number"
 							placeholder="Enter Stock Quantity" name="quantity"
-							class="form-control" id="last_name" required>
+							class="form-control" id="quantity" required>
 					</div>
 				
 				
 					<div class="input-box">
-						<label for="last_name" style="color:black; padding-top:10px; font-size:15px;">Product Image</label> <input type="file"
+						<label for="image" style="color:black; padding-top:10px; font-size:15px;">Product Image</label> <input type="file"
 							placeholder="Select Image" name="image" class="form-control"
-							id="last_name" required>
+							id="image" required>
 					</div>
 				
 				<div class="input-box">
