@@ -8,7 +8,7 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
 <link rel="stylesheet" href="css/styleTeam.css">
 
 <jsp:include page="teamLinks.jsp" />
@@ -139,10 +139,10 @@ margin: 30px;
 		<div class="card2">
 			<div class="content2">
 				<div class="imgBx">
-					<img src="images/av.jpeg" alt="">
+					<img src="images/rashminda2.jpg" alt="">
 				</div>
 				<div class="contentBx">
-					<h4>Avish Madushanka</h4>
+					<h4>Chamindu Rashminda</h4>
 					<h5>Developer</h5>
 				</div>
 				<div class="">
@@ -174,10 +174,10 @@ margin: 30px;
 		<div class="card2">
 			<div class="content2">
 				<div class="imgBx">
-					<img src="./images/rashminda2.jpg" alt="">
+					<img src="./images/av.jpeg" alt="">
 				</div>
 				<div class="contentBx">
-					<h4>Chamindu Rashminda</h4>
+					<h4>Avish Madushanka</h4>
 					<h5>Developer</h5>
 				</div>
 				<div class="">
