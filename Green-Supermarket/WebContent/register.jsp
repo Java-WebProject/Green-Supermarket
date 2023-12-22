@@ -72,42 +72,35 @@
 				<div></div>
 			<div class="input-box">
 
-				<input type="text" name="username" name="first_name" id="first_name"
+				<input type="text" name="username" id="first_name"
 					placeholder="Enter full name" required />
 			</div>
 
 			<div class="input-box">
 				
-				<input type="email" name="email"  id="last_name" name="last_name"
+				<input type="email" name="email"  id="email" 
 					placeholder="Enter email address" required />
 			</div>
 			<div class="column2">
 				<div class="input-box">
-					 <input type="password" name="password" id="last_name"
-							name="last_name"
-						placeholder="Enter password" required />
+					 <input type="password" name="password" id="password" placeholder="Enter password" required />
 				</div>
 				<div class="input-box">
-					 <input type="password" name="confirmPassword" name="confirmPassword"
-						placeholder="Enter password again" required />
+					 <input type="password" name="confirmPassword" placeholder="Enter password again" required />
 				</div>
 			</div>
 
 			<div class="column2">
 				<div class="input-box">
-					 <input type="number" name="mobile" id="last_name"
-							name="last_name"
-						placeholder="Enter phone number" required />
+					 <input type="number" name="mobile" id="mobile" placeholder="Enter phone number" required />
 				</div>
 				<div class="input-box">
-					<input type="number" name="pincode" id="last_name" name="last_name"
-						placeholder=" Enter postal code" required />
+					<input type="number" name="pincode" id="pincode" placeholder=" Enter postal code" required />
 				</div>
 			</div>
 			<div class="input-box">
 				
-				<input type="text" name="address"  id="last_name" name="last_name"
-					placeholder="Enter the address" required />
+				<input type="text" name="address"  id="address" placeholder="Enter the address" required />
 			</div>
 			
 			<button type="submit" class="bdesign">Submit</button>
