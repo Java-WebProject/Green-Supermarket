@@ -12,7 +12,7 @@
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Green Supermarket</title>
-    <link rel ="stylesheet" href="css/Navbar.css">
+    
  
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -79,28 +79,27 @@
             height: 45px;
         }
 
-        .search-bar-container {
-            display: flex;
-            align-items: center;
-            background-color: #f2f2f2;
-            border-radius: 25px;
-            padding: 8px;
-        }
-        
-
         .search-bar {
-            width: 400px;
-            border: none;
-            background-color: transparent;
-            font-size: 16px;
-            outline: none;
-        }
+        width: 400px;
+    border: 1px solid grey; /* Add this line to set the border color */
+    background-color: transparent;
+    font-size: 16px;
+    outline: none;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding-left: 10px;
+    height:35px;
+    }
 
-        .search-icon {
-            margin-right: 8px;
-            color: grey;
-        }
-
+    .btn5 {
+        width: 100px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        font-size: 16px;
+        background-color: #FEDE00;
+        border-color: #FEDE00;
+        height: 35px;
+    }
         .top-navbar-right {
             display: flex;
             align-items: center;
@@ -269,9 +268,17 @@
           align-items: center;
 		}
 		.search-bar {
-            width: 300px; /* Adjust the width as per your design */
+            width: 300px; /* Full width on small screens */
+            
         }
-                
+
+        
+
+        .btn5 {
+            width: 80px; /* Full width on small screens */
+            
+        }     
+        
         .top-navbar {
             flex-direction: column;
             align-items: flex-start;
@@ -392,19 +399,10 @@
             <img src="images/logo.png" alt="Logo" class="logo">
         </div>
         <form class="form-inline" action="AllProducts.jsp" method="get">
-    <div class="input-group">
-        <input type="text" class="form-control" style="width: 400px;
-            border-color: none;
-            background-color: #f2f2f2;
-            font-size: 16px;
-            outline: none;border-top-left-radius:10px;border-bottom-left-radius: 10px;" size="50" name="search"
-            placeholder="Search Products..." required>
-        <div class="input-group-append">
-            <button class="btn" type="submit" style="width: 100px; border-top-right-radius:10px;border-bottom-right-radius: 10px;font-size: 16px; background-color:#FEDE00; border-color:#FEDE00;height:33.5px;">
-                <i class="fas fa-search search-icon"></i> Search
-            </button>
-        </div>
-    </div>
+    <input type="text" class="search-bar" size="50" name="search" placeholder="Search Products..." required>
+<button class="btn5" type="submit" style="background-color: #FEDE00;">
+    <i class="fas fa-search search-icon"></i> Search
+</button>
 </form>
         <div class="top-navbar-right">
             <a href="register.jsp">Signup</a>
@@ -494,20 +492,12 @@
         <div>
             <img src="images/logo.png" alt="Logo" class="logo">
         </div>
-        <form class="form-inline" action="AllProducts.jsp" method="get">
-    <div class="input-group">
-        <input type="text" class="form-control" style="width: 400px;
-            border-color: none;
-            background-color: #f2f2f2;
-            font-size: 16px;
-            outline: none;border-top-left-radius:10px;border-bottom-left-radius: 10px;" size="50" name="search"
-            placeholder="Search Products..." required>
-        <div class="input-group-append">
-            <button class="btn" type="submit" style="width: 100px; border-top-right-radius:10px;border-bottom-right-radius: 10px;font-size: 16px; background-color:#FEDE00; border-color:#FEDE00;height:33.5px;">
-                <i class="fas fa-search search-icon"></i> Search
-            </button>
-        </div>
-    </div>
+        
+    <form class="form-inline" action="AllProducts.jsp" method="get">
+    <input type="text" class="search-bar" size="50" name="search" placeholder=" Search Products..." required>
+<button class="btn5" type="submit" style="background-color: #FEDE00;">
+    <i class="fas fa-search search-icon"></i> Search
+</button>
 </form>
         <div class="top-navbar-right">
             <a href="register.jsp">Signup</a>
@@ -568,7 +558,7 @@
 		    </div>
 		    <div class="hamburger-menu-links">
 		        <a href="index.jsp">Home</a>
-		        <a href="AllProducts.jsp">All Products</a>
+		        <a href="adminAllProducts.jsp">All Products</a>
 		         <a href="addProduct.jsp">Add Product</a>
 		        <a href="adminViewProduct.jsp">Update Products</a>
 		        <a href="adminStock.jsp">Stock</a>
@@ -602,20 +592,13 @@
 		            <img src="images/logo.png" alt="Logo" class="logo">
 		        </div>
 		        <form class="form-inline" action="AllProducts.jsp" method="get">
-    <div class="input-group">
-        <input type="text" class="form-control" style="width: 400px;
-            border-color: none;
-            background-color: #f2f2f2;
-            font-size: 16px;
-            outline: none;border-top-left-radius:10px;border-bottom-left-radius: 10px;" size="50" name="search"
-            placeholder="Search Products..." required>
-        <div class="input-group-append">
-            <button class="btn" type="submit" style="width: 100px; border-top-right-radius:10px;border-bottom-right-radius: 10px;font-size: 16px; background-color:#FEDE00; border-color:#FEDE00;height:33.5px;">
-                <i class="fas fa-search search-icon"></i> Search
-            </button>
-        </div>
-    </div>
+    <input type="text" class="search-bar" size="50" name="search" placeholder="Search Products..." required>
+<button class="btn5" type="submit" style="background-color: #FEDE00;">
+    <i class="fas fa-search search-icon"></i> Search
+</button>
 </form>
+
+
 
 
 		        <div class="top-navbar-right">
@@ -642,8 +625,8 @@
     </div>
 		        <div class="navlinks23">
 		        <a href="index.jsp" class="nav-link2">Home</a>
-		        <a href="AllProducts.jsp" class="nav-link2">All Products</a>
-		        <a href="orderDetails.jsp" class="nav-link2">Track Orders</a>
+		        <a href="adminAllProducts.jsp" class="nav-link2">All Products</a>
+		        <a href="feedback.jsp" class="nav-link2">Feedbacks</a>
 		        <a href="shippedItems.jsp" class="nav-link2">Shipped</a>
 		        <a href="unshippedItems.jsp" class="nav-link2">Unshipped</a>
 		        <a href="addProduct.jsp" class="nav-link2">Add Product</a>
@@ -665,11 +648,11 @@
     <script>
    
     // Fetch total amount using JavaScript
-    var totalAmount = document.getElementById('totalAmount').value;
+    /* var totalAmount = document.getElementById('totalAmount').value; */
 
     // Update the content in your navbar
-    var cartTotalAmountElement = document.getElementById('cartTotalAmount');
-    cartTotalAmountElement.innerText = 'Total Cart Amount: ' + totalAmount + ' Rupees';
+   /*  var cartTotalAmountElement = document.getElementById('cartTotalAmount');
+    cartTotalAmountElement.innerText = 'Total Cart Amount: ' + totalAmount + ' Rupees'; */
 
       const hamburgerMenu = document.querySelector('.hamburger-menu');
 const hamburgerMenuLinks = document.querySelector('.hamburger-menu-links');

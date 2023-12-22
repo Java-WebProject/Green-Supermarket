@@ -88,8 +88,8 @@
     cartItems = cart.getAllCartItems(userName);
     double subtotal = 0;
     double total = 0;
-    double tax = 10;
-    double shipping = 10;
+    double tax = 1;
+    double shipping = 1;
     int prodQuantity = 0; // Initialize prodQuantity outside the loop
     
     String orderId = UUID.randomUUID().toString();
@@ -101,7 +101,7 @@
         ProductBean product = new ProductServiceImpl().getProductDetails(prodId);
         double currAmount = product.getProdPrice() * prodQuantity;
         subtotal += currAmount;
-		total = subtotal+20;
+		total = subtotal+2;
         if (prodQuantity > 0) {
 %>
 
@@ -216,6 +216,7 @@
             purchase_units: [{
               amount: {
                 value: <%=total%> // Set the total amount dynamically
+                
               }
             }]
           });
