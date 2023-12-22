@@ -269,10 +269,10 @@ form .login-link p a{
                         %>
             <form action="./LoginSrv" method="post" class="form">
             <div class="input-box">
-            	<input type="email" name="username"  class="form-control"  placeholder="Enter your email" id="last_name" required/>
+            	<input type="email" name="username"  class="form-control"  placeholder="Enter your email" id="email" required/>
 			</div>
                 <div class="input-box">
-                	<input type="password" name="password"  class="form-control" placeholder="Enter your password" id="last_name" required/>
+                	<input type="password" name="password"  class="form-control" placeholder="Enter your password" id="password" required/>
 			</div>
                 
                  <div class="input-box">

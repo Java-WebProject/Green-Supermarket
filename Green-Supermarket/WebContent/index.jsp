@@ -152,7 +152,54 @@ div .box .box3 span{
 	font-size: 14px;
 	
 }
+.item-img2{
+		height: 50%; /* Adjust this value based on your design */
+    position: relative;
+    overflow: hidden;
+    border-radius: 2rem;
+	}
+	.item-info h3 {
+    color: black;
+    margin-left: 1.5rem;
+    margin-top: 0rem;
+    margin-bottom: 0rem; /* Adjusted margin-bottom */
+    font-size: 1.5rem;
+    font-weight: bold;
+   
+    
+}
+.item-info h4 {
+    margin-left: 1.5rem;
+    margin-top: 0rem; /* Adjusted margin-top */
+    font-size: 1.2rem;
+    padding-top:0.8rem;
+    
+}
+.topic{
+	text-align:center;
+	font-size:2rem;
+}
+    .cart-btn2 i {
+        font-size: 2rem;
+    }
 
+    .food-menu2 {
+        padding: 2rem 0;
+    }
+
+    .food-item2 {
+        width: 50%;
+        height: 25rem;
+    }
+
+    .food-category {
+        overflow-y: scroll;
+    }
+
+    .food-category button {
+        width: max-content;
+    }
+}
 /*.box4 a {*/
 /*	padding-bottom: 40px;*/
 /*}*/
@@ -382,16 +429,42 @@ div .box .box3 span{
     h1 {
         font-size: 2rem !important;
     }
-
-    .cart-btn i {
+	.item-img2{
+		height: 50%; /* Adjust this value based on your design */
+    position: relative;
+    overflow: hidden;
+    border-radius: 2rem;
+	}
+	.item-info h3 {
+    color: black;
+    margin-left: 1.5rem;
+    margin-top: 0rem;
+    margin-bottom: 0rem; /* Adjusted margin-bottom */
+    font-size: 1.5rem;
+    font-weight: bold;
+   
+    
+}
+.item-info h4 {
+    margin-left: 1.5rem;
+    margin-top: 0rem; /* Adjusted margin-top */
+    font-size: 1.2rem;
+    padding-top:0.8rem;
+    
+}
+.topic{
+	text-align:center;
+	font-size:2rem;
+}
+    .cart-btn2 i {
         font-size: 2rem;
     }
 
-    .food-menu {
+    .food-menu2 {
         padding: 2rem 0;
     }
 
-    .food-item {
+    .food-item2 {
         width: 50%;
         height: 25rem;
     }
