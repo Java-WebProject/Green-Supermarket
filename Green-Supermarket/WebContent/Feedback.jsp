@@ -4,6 +4,8 @@
 <%@ page import="com.DB.DBConnect" %>
 <%@ page import="com.entity.FeedbackDtls" %>
 <%@ page import="java.util.List" %>
+<%@ page import="com.green.service.impl.*, com.green.service.*" %>
+<%@ page import="jakarta.servlet.http.HttpSession" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -11,14 +13,14 @@
 <html>
 <head>
     <title>Feedback</title>
-
+	
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="feedstyle.css">
     <!-- Fontawesome Link for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-    <script src="script.js" defer></script>
+   
 
 
     <link rel="stylesheet" href="css/feed.css" />
@@ -72,7 +74,7 @@
 
 
         /* Import Google font - Poppins */
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+       
         * {
             margin: 0;
             padding: 0;
@@ -266,7 +268,14 @@
     </div>
 </section>
 
-<section style="margin-top: 30px;display: flex;margin-bottom: 50px;align-content: center;" >
+
+<%
+	String userType = (String) session.getAttribute("usertype");
+if ("customer".equalsIgnoreCase(userType) || userType == null) { //CUSTOMER HEADER
+
+	double notf = new CartServiceImpl().getCartSum((String) session.getAttribute("username"));
+	%>
+	<section style="margin-top: 30px;display: flex;margin-bottom: 50px;align-content: center;" >
 
 <div class="wrapper">
     <i id="left"  class="fa-solid fa-arrow-left"></i>
@@ -291,6 +300,39 @@
     <i id="right" class="fa-solid fa-arrow-right"></i>
 </div>
 </section>
+<%
+	} else { //ADMIN HEADER
+	%>
+	<section style="margin-top: 30px;display: flex;margin-bottom: 50px;align-content: center;" >
+
+<div class="wrapper">
+    <i id="left"  class="fa-solid fa-arrow-left"></i>
+    <ul class="carousel">
+
+        <%
+            FeedbackDAOImpl dao=new FeedbackDAOImpl(DBConnect.getConn());
+            List<FeedbackDtls> list=dao.getFeedbacks();
+
+            for(FeedbackDtls fdb:list)
+            {%>
+                <li class="card" style="padding:10px 15px;overflow-y:auto;">
+                    <h2 style="color:#1FAB89"><%=fdb.getFeedname()%></h2>
+                    <p><span style="font-size: 15px;text-align: justify;"><%=fdb.getFeedmessage()%></span></p>
+                    <p><span style="font-size: 15px;text-align: justify;"><%=fdb.getFeedemail()%></span></p>
+                </li>
+            <%
+            }
+        %>
+
+
+    </ul>
+    <i id="right" class="fa-solid fa-arrow-right"></i>
+</div>
+</section>
+<%
+	}
+	%>
+	
 <script>
 const wrapper = document.querySelector(".wrapper");
 const carousel = document.querySelector(".carousel");
