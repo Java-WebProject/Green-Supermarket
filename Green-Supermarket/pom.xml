@@ -44,7 +44,19 @@
 			<version>8.0.33</version>
 		</dependency>
 
+		<dependency>
+			<groupId>jakarta.servlet</groupId>
+			<artifactId>jakarta.servlet-api</artifactId>
+			<version>5.0.0</version> <!-- or the version compatible with your server -->
+			<scope>provided</scope>
+		</dependency>
 
+
+		<dependency>
+	<groupId>com.paypal.sdk</groupId>
+	<artifactId>rest-api-sdk</artifactId>
+	<version>1.14.0</version>
+</dependency>
 		<dependency>
     <groupId>javax.servlet</groupId>
     <artifactId>jstl</artifactId>
@@ -94,5 +106,45 @@
 			<artifactId>commons-codec</artifactId>
 			<version>1.15</version>
 		</dependency>
+		
+		<dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.2.2</version>
+        </dependency>
+
+        <!-- J2EE API -->
+        <!-- This is typically provided by your servlet container, so you might not need to include it explicitly -->
+
+        <!-- Jakarta Servlet API -->
+         <dependency>
+        <groupId>jakarta.servlet</groupId>
+        <artifactId>jakarta.servlet-api</artifactId>
+        <version>4.0.3</version>
+        <scope>provided</scope>
+    </dependency>
+
+        <!-- javax API -->
+        <!-- Note: You may not need javax.jar.zip, javax API is usually provided by the JDK -->
+
+        <!-- PayPal SDK -->
+        <dependency>
+            <groupId>com.paypal.sdk</groupId>
+            <artifactId>rest-api-sdk</artifactId>
+            <version>1.14.0</version>
+        </dependency>
+
+        <!-- SLF4J API -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.21</version>
+        </dependency>
 	</dependencies>
+	<repositories>
+    <repository>
+        <id>jakarta.ee</id>
+        <url>https://repo.eclipse.org/content/repositories/jakartaee/</url>
+    </repository>
+</repositories>
 </project>
