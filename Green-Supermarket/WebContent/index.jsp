@@ -498,9 +498,9 @@ div .box .box3 span{
 @media only screen and (max-width: 700px) {
   .column {
    float: left;
-  width: 33.33%;
-  padding-left: 70px;
-  padding-top: 25px;
+  width: 33.3%;
+  padding-left: 45px;
+  padding-top: 15px;
 }
 /* Clearfix (clear floats) */
 .row::after {
