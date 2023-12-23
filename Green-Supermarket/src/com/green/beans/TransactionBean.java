@@ -15,7 +15,7 @@ public class TransactionBean implements Serializable {
 
 	private Timestamp transDateTime;
 
-	private String transAmount;
+	private String amount;
 
 	public TransactionBean() {
 		super();
@@ -30,10 +30,10 @@ public class TransactionBean implements Serializable {
 		this.transDateTime = timestamp;
 	}
 
-	public TransactionBean(String userName, String transAmount) {
+	public TransactionBean(String userName, String amount) {
 		super();
 		this.userName = userName;
-		this.transAmount = transAmount;
+		this.amount = amount;
 
 		this.transactionId = IDUtil.generateTransId();
 
@@ -47,11 +47,11 @@ public class TransactionBean implements Serializable {
 
 	}
 
-	public TransactionBean(String transactionId, String userName, String transAmount) {
+	public TransactionBean(String transactionId, String userName, String amount) {
 		super();
 		this.transactionId = transactionId;
 		this.userName = userName;
-		this.transAmount = transAmount;
+		this.amount = amount;
 
 		SimpleDateFormat sdf = new SimpleDateFormat("YYYY-MM-DD hh:mm:ss");
 
@@ -62,20 +62,20 @@ public class TransactionBean implements Serializable {
 		this.transDateTime = timestamp;
 	}
 
-	public TransactionBean(String userName, Timestamp transDateTime, String transAmount) {
+	public TransactionBean(String userName, Timestamp transDateTime, String amount) {
 		super();
 		this.userName = userName;
 		this.transDateTime = transDateTime;
 		this.transactionId = IDUtil.generateTransId();
-		this.transAmount = transAmount;
+		this.amount = amount;
 	}
 
-	public TransactionBean(String transactionId, String userName, Timestamp transDateTime, String transAmount) {
+	public TransactionBean(String transactionId, String userName, Timestamp transDateTime, String amount) {
 		super();
 		this.transactionId = transactionId;
 		this.userName = userName;
 		this.transDateTime = transDateTime;
-		this.transAmount = transAmount;
+		this.amount = amount;
 
 	}
 
@@ -103,12 +103,12 @@ public class TransactionBean implements Serializable {
 		this.transDateTime = transDateTime;
 	}
 
-	public String getTransAmount() {
-		return transAmount;
+	public String getAmount() {
+		return amount;
 	}
 
-	public void setTransAmount(String transAmount) {
-		this.transAmount = transAmount;
+	public void setAmount(String amount) {
+		this.amount = amount;
 	}
 
 }

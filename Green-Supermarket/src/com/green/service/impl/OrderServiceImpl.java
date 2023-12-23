@@ -21,59 +21,55 @@ import com.green.utility.MailMessage;
 public class OrderServiceImpl implements OrderService {
 
 	@Override
+	
 	public String paymentSuccess(String userName, String total) {
-		String status = "Order Placement Failed!";
+	    String status = "Order Placement Failed!";
 
-		List<CartBean> cartItems = new ArrayList<CartBean>();
-		cartItems = new CartServiceImpl().getAllCartItems(userName);
+	    List<CartBean> cartItems = new ArrayList<CartBean>();
+	    cartItems = new CartServiceImpl().getAllCartItems(userName);
 
-		if (cartItems.size() == 0)
-			return status;
+	    if (cartItems.size() == 0)
+	        return status;
 
-		TransactionBean transaction = new TransactionBean(userName, total);
-		boolean ordered = false;
+	    TransactionBean transaction = new TransactionBean(userName, total);
+	    boolean ordered = false;
 
-		String transactionId = transaction.getTransactionId();
+	    String transactionId = transaction.getTransactionId();
+	    OrderBean order = null;  // Declare order outside the loop
 
-		// System.out.println("Transaction: "+transaction.getTransactionId()+"
-		// "+transaction.getTransAmount()+" "+transaction.getUserName()+"
-		// "+transaction.getTransDateTime());
+	    for (CartBean item : cartItems) {
+	        double amount = new ProductServiceImpl().getProductPrice(item.getProdId()) * item.getQuantity();
+	        order = new OrderBean(transactionId, item.getProdId(), item.getQuantity(), amount);
 
-		for (CartBean item : cartItems) {
+	        ordered = addOrder(order);
+	        if (!ordered)
+	            break;
+	        else {
+	            ordered = new CartServiceImpl().removeAProduct(item.getUserId(), item.getProdId());
+	        }
 
-			double amount = new ProductServiceImpl().getProductPrice(item.getProdId()) * item.getQuantity();
+	        if (!ordered)
+	            break;
+	        else
+	            ordered = new ProductServiceImpl().sellNProduct(item.getProdId(), item.getQuantity());
 
-			OrderBean order = new OrderBean(transactionId, item.getProdId(), item.getQuantity(), amount);
+	        if (!ordered)
+	            break;
+	    }
 
-			ordered = addOrder(order);
-			if (!ordered)
-				break;
-			else {
-				ordered = new CartServiceImpl().removeAProduct(item.getUserId(), item.getProdId());
-			}
+	    if (ordered && order != null) {
+	        ordered = this.addTransaction(transaction, order);
+	        if (ordered) {
+	            MailMessage.transactionSuccess(userName, new UserServiceImpl().getFName(userName),
+	                    transaction.getTransactionId(), transaction.getAmount());
 
-			if (!ordered)
-				break;
-			else
-				ordered = new ProductServiceImpl().sellNProduct(item.getProdId(), item.getQuantity());
+	            status = "Order Placed Successfully!";
+	        }
+	    }
 
-			if (!ordered)
-				break;
-		}
-
-		if (ordered) {
-			ordered = new OrderServiceImpl().addTransaction(transaction);
-			if (ordered) {
-
-				MailMessage.transactionSuccess(userName, new UserServiceImpl().getFName(userName),
-						transaction.getTransactionId(), transaction.getTransAmount());
-
-				status = "Order Placed Successfully!";
-			}
-		}
-
-		return status;
+	    return status;
 	}
+
 
 	@Override
 	public boolean addOrder(OrderBean order) {
@@ -106,33 +102,36 @@ public class OrderServiceImpl implements OrderService {
 	}
 
 	@Override
-	public boolean addTransaction(TransactionBean transaction) {
-		boolean flag = false;
+	public boolean addTransaction(TransactionBean transaction, OrderBean order) {
+	    boolean flag = false;
 
-		Connection con = DBUtil.provideConnection();
+	    Connection con = DBUtil.provideConnection();
+	    PreparedStatement ps = null;
 
-		PreparedStatement ps = null;
+	    try {
+	        ps = con.prepareStatement("insert into transactions values(?,?,?,?)");
 
-		try {
-			ps = con.prepareStatement("insert into transactions values(?,?,?,?)");
+	        ps.setString(1, transaction.getTransactionId());
+	        ps.setString(2, transaction.getUserName());
+	        ps.setTimestamp(3, transaction.getTransDateTime());
+	        ps.setDouble(4, order.getAmount());
 
-			ps.setString(1, transaction.getTransactionId());
-			ps.setString(2, transaction.getUserName());
-			ps.setTimestamp(3, transaction.getTransDateTime());
-			ps.setString(4, transaction.getTransAmount());
+	        int k = ps.executeUpdate();
 
-			int k = ps.executeUpdate();
+	        if (k > 0)
+	            flag = true;
 
-			if (k > 0)
-				flag = true;
+	    } catch (SQLException e) {
+	        e.printStackTrace();
+	    } finally {
+	        DBUtil.closeConnection(con);
+	        DBUtil.closeConnection(ps);
+	    }
 
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-		return flag;
+	    return flag;
 	}
+
+
 
 	@Override
 	public int countSoldItem(String prodId) {

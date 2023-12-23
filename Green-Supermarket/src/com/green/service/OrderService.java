@@ -13,7 +13,8 @@ public interface OrderService {
 
 	public boolean addOrder(OrderBean order);
 
-	public boolean addTransaction(TransactionBean transaction);
+	public boolean addTransaction(TransactionBean transaction, OrderBean order);
+
 
 	public int countSoldItem(String prodId);
 

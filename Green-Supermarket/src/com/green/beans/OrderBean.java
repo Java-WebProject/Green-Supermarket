@@ -8,7 +8,7 @@ public class OrderBean implements Serializable {
 	private String transactionId;
 	private String productId;
 	private int quantity;
-	private Double amount;
+	public Double amount;
 	private int shipped;
 
 	public OrderBean() {

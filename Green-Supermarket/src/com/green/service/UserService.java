@@ -11,7 +11,7 @@ public interface UserService {
 
 	public String registerUser(String userName, Long mobileNo, String emailId, String address, int pinCode,
 			String password);
-
+	boolean updateUser(UserBean user);
 	public String registerUser(UserBean user);
 
 	public boolean isRegistered(String emailId);

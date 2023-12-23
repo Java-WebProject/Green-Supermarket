@@ -25,6 +25,43 @@ public class UserServiceImpl implements UserService {
 
 		return status;
 	}
+	
+	@Override
+	public boolean updateUser(UserBean user) {
+	    boolean isUpdated = false;
+	    Connection conn = DBUtil.provideConnection();
+	    PreparedStatement ps = null;
+
+	    try {
+	        if (conn != null) {
+	            ps = conn.prepareStatement("UPDATE " + IUserConstants.TABLE_USER
+	                    + " SET mobile=?, address=?, pincode=? WHERE email=?");
+
+	            ps.setLong(1, user.getMobile());
+	            ps.setString(2, user.getAddress());
+	            ps.setInt(3, user.getPinCode());
+	            ps.setString(4, user.getEmail());
+
+	            int rowsAffected = ps.executeUpdate();
+
+	            if (rowsAffected > 0) {
+	                isUpdated = true;
+	                System.out.println("User updated successfully!");
+	            } else {
+	                System.out.println("No user found with the given email for update.");
+	            }
+	        }
+	    } catch (SQLException e) {
+	        e.printStackTrace();
+	    } finally {
+	        DBUtil.closeConnection(ps);
+	        DBUtil.closeConnection(conn);
+	    }
+
+	    return isUpdated;
+	}
+
+
 
 	@Override
 	public String registerUser(UserBean user) {
