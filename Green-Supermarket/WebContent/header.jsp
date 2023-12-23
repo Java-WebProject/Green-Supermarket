@@ -268,15 +268,18 @@
           align-items: center;
 		}
 		.search-bar {
-            width: 300px; /* Full width on small screens */
+            width: 250px; /* Full width on small screens */
+            height:25px;
+            margin-top:10px;
             
         }
 
         
 
         .btn5 {
-            width: 80px; /* Full width on small screens */
-            
+            width: 70px; /* Full width on small screens */
+            height:25px;
+            margin-top:10px;
         }     
         
         .top-navbar {
@@ -467,7 +470,7 @@
         <a href="AllProducts.jsp">All Products</a>
          <a href="orderDetails.jsp">Track Orders</a>
         <a href="teams.jsp">About Us</a>
-         <a href="userProfile.jsp">Profile</a>
+         <a href="updateDeliveryDetails.jsp">Delivery Details</a>
         <a href="feedback.jsp">Contact Us</a>
         <div class="dropdown">
         <div class="dropdown-toggle" id="categories-dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
@@ -538,7 +541,7 @@
         <a href="index.jsp" class="nav-link2">Home</a>
         <a href="AllProducts.jsp" class="nav-link2">All Products</a>
         <a href="orderDetails.jsp" class="nav-link2">Track Orders</a>
-        <a href="userProfile.jsp" class="nav-link2">Profile</a>
+        <a href="updateDeliveryDetails.jsp" class="nav-link2">Delivery Details</a>
         <a href="feedback.jsp" class="nav-link2">Contact Us</a>
         <a href="teams.jsp" class="nav-link2">About Us</a>
         </div>
@@ -560,7 +563,7 @@
 		        <a href="index.jsp">Home</a>
 		        <a href="adminAllProducts.jsp">All Products</a>
 		         <a href="addProduct.jsp">Add Product</a>
-		        <a href="adminViewProduct.jsp">Update Products</a>
+		        <a href="adminAllProducts.jsp">Update Products</a>
 		        <a href="adminStock.jsp">Stock</a>
 		        <a href="unshippedItems.jsp">Orders</a>
 		        <div class="categories-dropdown">
@@ -627,10 +630,10 @@
 		        <a href="index.jsp" class="nav-link2">Home</a>
 		        <a href="adminAllProducts.jsp" class="nav-link2">All Products</a>
 		        <a href="feedback.jsp" class="nav-link2">Feedbacks</a>
-		        <a href="shippedItems.jsp" class="nav-link2">Shipped</a>
-		        <a href="unshippedItems.jsp" class="nav-link2">Unshipped</a>
+		        <a href="shippedItems.jsp" class="nav-link2">Dispatched</a>
+		        <a href="unshippedItems.jsp" class="nav-link2">Undispatched</a>
 		        <a href="addProduct.jsp" class="nav-link2">Add Product</a>
-		        <a href="adminViewProduct.jsp" class="nav-link2">Update Products</a>
+		        <a href="adminAllProducts.jsp" class="nav-link2">Update Products</a>
 		        <a href="adminStock.jsp" class="nav-link2">Stock</a>
 		        </div>
 		    </div>
@@ -674,9 +677,13 @@ categoriesDropdownToggle.addEventListener('click', () => {
     categoriesDropdownContent.style.left = `${rightPosition}px`; // Use left instead of right
     categoriesDropdownContent.classList.toggle('active');
 });
-
-
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
 
 
 	
