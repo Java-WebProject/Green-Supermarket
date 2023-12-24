@@ -39,7 +39,7 @@
 	<jsp:include page="header.jsp" />
 
 	<div class="text-center"
-		style="color: Black; font-size: 28px; font-weight: bold;">Unshipped
+		style="color: Black; font-size: 28px; font-weight: bold; margin-top:10px;">Undispatched
 		Orders</div>
 	<div class="container-fluid">
 		<div class="table-responsive ">
@@ -81,10 +81,10 @@
 						<td><%=userId%></td>
 						<td><%=userAddr%></td>
 						<td><%=quantity%></td>
-						<td>READY_TO_SHIP</td>
+						<td>READY_TO_DISPATCH</td>
 						<td><a
 							href="ShipmentServlet?orderid=<%=order.getTransactionId()%>&amount=<%=order.getAmount()%>&userid=<%=userId%>&prodid=<%=order.getProductId()%>"
-							class="btn btn-success">SHIP NOW</a></td>
+							class="btn btn-success">DISPATCH NOW</a></td>
 					</tr>
 
 					<%

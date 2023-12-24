@@ -2,7 +2,7 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ page
 	import="com.green.service.impl.*, com.green.beans.*,com.green.service.*,java.util.*"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -13,7 +13,7 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
-<body style="background-color: #E6F9E6;">
+<body style="background-color: #FFFFFF;">
 	<%
 	/* Checking the user credentials */
 	String userType = (String) session.getAttribute("usertype");
@@ -36,13 +36,13 @@
 	<jsp:include page="header.jsp" />
 
 	<div class="text-center"
-		style="color: green; font-size: 24px; font-weight: bold;">Shipped
+		style="color: black; font-size: 28px; font-weight: bold; margin-top:10px;">Dispatched
 		Orders</div>
 	<div class="container-fluid">
 		<div class="table-responsive ">
 			<table class="table table-hover table-sm">
 				<thead
-					style="background-color: #115884; color: white; font-size: 18px;">
+					style="background-color: #115884; color: white; font-size: 24px;">
 					<tr>
 						<th>TransactionId</th>
 						<th>ProductId</th>
@@ -72,14 +72,14 @@
 							count++;
 					%>
 
-					<tr>
+					<tr style="font-size: 20px;">
 						<td><%=transId%></td>
 						<td><a href="./updateProduct.jsp?prodid=<%=prodId%>"><%=prodId%></a></td>
 						<td><%=userId%></td>
 						<td><%=userAddr%></td>
 						<td><%=quantity%></td>
 						<td>Rs. <%=order.getAmount()%></td>
-						<td class="text-success" style="font-weight: bold;">SHIPPED</td>
+						<td class="text-success" style="font-weight: bold;">DISPATCHED</td>
 
 					</tr>
 
