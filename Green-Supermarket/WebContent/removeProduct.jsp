@@ -48,7 +48,7 @@
 	%>
 	<div class="container">
 		<div class="row"
-			style="margin-top: 5px; margin-left: 2px; margin-right: 2px;">
+			style="margin-top: 15px; margin-left: 2px; margin-right: 2px;">
 			<form action="./RemoveProductSrv" method="post"
 				class="col-md-4 col-md-offset-4"
 				style="border: 2px solid black; border-radius: 10px; background-color: #FFE5CC; padding: 10px;">
@@ -70,8 +70,8 @@
 		</div>
 	</div>
 
-	<div class="footer">
-            <div class="container">
+	<div class="footer" style="margin-top:90px;">
+            <div class="container" >
                 
                 <div class="row">
                     <div class="col-md-6 col-lg-4">
