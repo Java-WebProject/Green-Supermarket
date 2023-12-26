@@ -37,7 +37,9 @@
 .nonebut{
 	background-color:none;
 }
-
+.topic{
+	font-size: 4.5rem;
+}
 .ts {
 	font-size: 14px;
 }
