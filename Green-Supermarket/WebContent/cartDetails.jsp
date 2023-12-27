@@ -239,6 +239,9 @@
 
         </tbody>
     </table>
+    <div style="color: red; font-size: 18px; font-weight: bold; text-align:justify;">
+   Important!: If you want to deliver the order to a different address other than the address mentioned in the registration form, please update your delivery address <a href="updateDeliveryDetails.jsp"> from here.</a>
+</div>
 </div>
 <!-- End of Product Items List -->
 
