@@ -3,17 +3,22 @@ package com.green.service.impl;
 import java.sql.Connection;
 
 
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-
 import com.green.beans.CartBean;
+
+import com.green.utility.DBUtil;
+import com.green.utility.MailMessage;
+
 import com.green.beans.DemandBean;
 import com.green.beans.ProductBean;
 import com.green.service.CartService;
-import com.green.utility.DBUtil;
+
+
 
 public class CartServiceImpl implements CartService {
 
@@ -389,7 +394,36 @@ public class CartServiceImpl implements CartService {
 
 		return count;
 	}
+	@Override
+	public String removeAllItemsFromCart(String userId, String userName) {
+	    String status = "Failed to remove all items from the cart";
+	    List<CartBean> cartItems = new ArrayList<CartBean>();
+	    cartItems = new CartServiceImpl().getAllCartItems(userId);
 
+	    Connection con = DBUtil.provideConnection();
+	    PreparedStatement ps = null;
+
+	    try {
+	        // Delete all items from the user's cart
+	        ps = con.prepareStatement("delete from usercart where username=?");
+	        ps.setString(1, userId);
+
+	        int k = ps.executeUpdate();
+
+	        if (k > 0) {
+	            status = "Order Cancelled Successfully!";
+	            MailMessage.orderCancel(userId,new UserServiceImpl().getFName(userName));
+	        }
+	    } catch (SQLException e) {
+	        status = "Error: " + e.getMessage();
+	        e.printStackTrace();
+	    } finally {
+	        DBUtil.closeConnection(con);
+	        DBUtil.closeConnection(ps);
+	    }
+
+	    return status;
+	}
 	@Override
 	public int getCartItemCount(String userId, String itemId) {
 		int count = 0;
