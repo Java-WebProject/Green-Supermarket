@@ -21,4 +21,5 @@ public interface CartService {
 
 	public boolean removeAProduct(String userId, String prodId);
 	public double getCartSum(String userId);
+	public String removeAllItemsFromCart(String userId,String userName);
 }
