@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ page import="com.green.service.impl.*, com.green.service.*,com.green.beans.*,java.util.*,jakarta.servlet.ServletOutputStream,java.io.*"%>
 <%@ page import="net.codejava.* "%>
+<%@ page import="com.green.service.impl.CartServiceImpl" %>
+
+<%@ page import="com.green.utility. *" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -48,7 +51,26 @@
             cart.removeProductFromCart(uid, pid);
         }
     }
+ // Get the user ID from the session directly
+    String userId = (String) session.getAttribute("username");
+
+    // Create an instance of the CartService
+    CartService cartService = new CartServiceImpl();
+
+    // Check if the "Cancel" button is clicked
+    String cancelAction = request.getParameter("cancelAction");
+
+    if ("cancelCart".equals(cancelAction)) {
+        // If "Cancel" button is clicked, remove all items from the cart
+    	String removalStatus = cartService.removeAllItemsFromCart(userId, userName);
+        
+        session.setAttribute("statusMessage", removalStatus);
+        response.sendRedirect("cartDetails.jsp");
+    }
 %>
+
+
+
 
 <jsp:include page="header.jsp" />
 
@@ -150,9 +172,10 @@
 <tr style="background-color: grey; color: white;">
     <td colspan="4" style="text-align: center;"></td>
     <td>
-        <form method="post">
-            <button formaction="userHome.jsp" style="background-color: black; color: white; border-radius:10px;">Cancel</button>
-        </form>
+        <form action="./CancelOrder" method="post">
+    <input type="submit" value="Cancel Order" style="background-color:blue; border-radius:20px; height:40px; width:140px;">
+</form>
+
     </td>
     <td colspan="2" align="center">
        

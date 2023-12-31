@@ -9,9 +9,26 @@
 <head>
 <meta charset="UTF-8">
 <title>Payment Receipt</title>
-<style type="text/css">
-    table { border: 0; }
-    table td { padding: 5px; }
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Amaranth&family=Reem+Kufi:wght@400;500;600;700&display=swap');
+	body
+		{
+		
+		font-family: 'Amaranth', sans-serif;
+		}
+
+    table { 
+    border: 0;
+    font-family: 'Amaranth', sans-serif; 
+    }
+    
+    table td { 
+    padding: 5px;
+    font-family: 'Amaranth', sans-serif; 
+    }
+    
+    
+    
 </style>
 </head>
 <body>
@@ -23,6 +40,7 @@
     String tax = request.getParameter("tax");
     String subtotal = request.getParameter("subtotal");
     String orderId = request.getParameter("orderId");
+    String shippingAddress = request.getParameter("shippingAddress");
     
     %>
     
@@ -32,18 +50,9 @@
             <td><b>Merchant:</b></td>
             <td>Green Supermarket</td>
         </tr>
-        <tr>
-            <td><b>Order Id:</b></td>
-            <td><%=orderId %></td>
-        </tr>
-        <tr>
-            <td><b>Payer:</b></td>
-            <td>${payer.firstName} ${payer.lastName}</td>      
-        </tr>
-        <tr>
-            <td><b>Description:</b></td>
-            <td>${transaction.description}</td>
-        </tr>
+        
+        
+        
         <tr>
             <td><b>Subtotal:</b></td>
             <td><%=subtotal%> USD</td>
